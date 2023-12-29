@@ -1,7 +1,7 @@
-<nav class="relative px-4 py-4 flex justify-between items-center bg-white">
+<nav class="relative px-10 py-4 flex justify-between items-center bg-white">
 		<a class="text-3xl font-bold leading-none" href="#">
 			
-            <img width="200" src="../public/Img/IMMOCONNECT.png" alt="logo">
+            <img width="200" src="../../public/Img/IMMOCONNECT.png" alt="logo">
 		</a>
 		<div class="lg:hidden">
 			<button class="navbar-burger flex items-center text-orange-600 p-3">
