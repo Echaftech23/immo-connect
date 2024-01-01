@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
 interface DaoInterface
 {
     public function getAll();
@@ -10,4 +14,9 @@ interface DaoInterface
     public function getById($id);
     public function deleteById($id);
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ghizlane
+>>>>>>> dev
