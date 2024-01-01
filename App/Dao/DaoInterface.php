@@ -1,12 +1,15 @@
 <?php
 
-namespace App\dao;
+
+
 
 interface DaoInterface
 {
+    public function getAll();
     public function save($entity);
     public function update($entity);
-    public function findById($id);
+    public function getById($id);
     public function deleteById($id);
-    public function findByAll();
+
 }
+>>>>>>> ghizlane
