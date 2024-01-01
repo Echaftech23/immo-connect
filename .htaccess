@@ -1,0 +1,3 @@
+RewriteEngine On
+DirectoryIndex app/controllers/RouteHandler.php
+RewriteRule ^(.*)$ immo-connect/app/routes/App.php?url=$1 [QSA,L]
