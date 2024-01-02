@@ -57,7 +57,7 @@
         <aside class="bg-gradient-to-br from-gray-800 to-gray-900 -translate-x-80 fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 lg:translate-x-0">
             <?php
 
-            include "../includes/sidebar.php";
+            include "../includes/vendeurSidebar.php";
             ?>
             </ul>
     </div>
@@ -79,7 +79,7 @@
 
             <?php
 
-            include "../includes/sidebar.php";
+            include "../includes/vendeurSidebar.php";
             ?>
             <li>
                 <a class="" href="#">
@@ -285,7 +285,7 @@
 
 
 
-            <div class="w-full max-w-full px-3 mt-0 lg:w-7/12 lg:flex-none">
+            <!-- <div class="w-full max-w-full px-3 mt-0 lg:w-7/12 lg:flex-none">
                 <div class="border-black/12.5 shadow-soft-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
                         <h6>Sales overview</h6>
@@ -300,7 +300,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- component -->
             <!-- <div class="antialiased sans-serif bg-gray-200 w-lg min-h-screen "> -->
 

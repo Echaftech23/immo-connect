@@ -89,43 +89,20 @@
                         </div>
                     </div>
 
-                    <!-- <button class="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
-            <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" stroke-width="3" class="h-6 w-6 text-orange-gray-500">
-                <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd"></path>
-              </svg>
-            </span>
-          </button> -->
+                    
                     <a href="#">
                         <button class="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 hidden items-center gap-1 px-4 lg:flex" type="button">
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5 text-orange-gray-500">
-                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd"></path>
-              </svg>Sign In -->
+                            
                             <img src="../../public/img/Bell (1).png" alt="nothification">
                         </button>
                         <button class="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
                             <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5 text-orange-gray-500">
-                  <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd"></path>
-                </svg> -->
+                                
                                 <img src="../../public/img/Bell (1).png" alt="nothification">
                             </span>
                         </button>
                     </a>
-                    <!-- <button class="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30" type="button">
-            <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-            
-            </span>
-          </button> -->
-                    <!-- <img src="../../public/img/grommet-icons_google.png" alt=""> -->
-                    <!-- <div class="dropdown relative inline-block float-right">
-           <button class="dropbtn bg-green-600 text-white px-4 py-2 text-sm rounded hover:bg-green-700">Right</button>
-              <div class="dropdown-content hidden absolute right-0 bg-gray-100 min-w-48 border border-gray-200 shadow-md mt-2">
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Link 2</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Link 3</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Link 1</a>
-                </div>
-            </div> -->
+                    
 
                     <div class="dropdown float-right relative inline-block ">
                         <button class="dropbtn"><img src="../../public/img/Ellipse 300.png" alt=""></button>
@@ -402,139 +379,7 @@
 
 
 
-            <!-- <div class="mb-4 grid grid-cols-1 gap-6 lg:grid-cols-3">
-                <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md overflow-hidden lg:col-span-2">
-                    <div class="relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex items-center justify-between p-6">
-                        <div>
-                            <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-orange-gray-900 mb-1">Projects</h6>
-                            <p class="antialiased font-sans text-sm leading-normal flex items-center gap-1 font-normal text-orange-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" aria-hidden="true" class="h-4 w-4 text-orange-500">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
-                                </svg>
-                                <strong>30 done</strong> this month
-                            </p>
-                        </div>
-                        <button aria-expanded="false" aria-haspopup="menu" id=":r5:" class="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-8 max-w-[32px] h-8 max-h-[32px] rounded-lg text-xs text-orange-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30" type="button">
-                            <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currenColor" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" aria-hidden="true" class="h-6 w-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"></path>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="p-6 overflow-x-scroll px-0 pt-0 pb-2">
-                        <table class="w-full min-w-[640px] table-auto">
-                            <thead>
-                                <tr>
-                                    <th class="border-b border-orange-gray-50 py-3 px-6 text-left">
-                                        <p class="block antialiased font-sans text-[11px] font-medium uppercase text-orange-gray-400">companies</p>
-                                    </th>
-                                    <th class="border-b border-orange-gray-50 py-3 px-6 text-left">
-                                        <p class="block antialiased font-sans text-[11px] font-medium uppercase text-orange-gray-400">budget</p>
-                                    </th>
-                                    <th class="border-b border-orange-gray-50 py-3 px-6 text-left">
-                                        <p class="block antialiased font-sans text-[11px] font-medium uppercase text-orange-gray-400">completion</p>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="flex items-center gap-4">
-                                            <p class="block antialiased font-sans text-sm leading-normal text-orange-gray-900 font-bold">Material XD Version</p>
-                                        </div>
-                                    </td>
-
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <p class="block antialiased font-sans text-xs font-medium text-orange-gray-600">$14,000</p>
-                                    </td>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="w-10/12">
-                                            <p class="antialiased font-sans mb-1 block text-xs font-medium text-orange-gray-600">60%</p>
-                                            <div class="flex flex-start bg-orange-gray-50 overflow-hidden w-full rounded-sm font-sans text-xs font-medium h-1">
-                                                <div class="flex justify-center items-center h-full bg-gradient-to-tr from-orange-600 to-orange-400 text-white" style="width: 60%;"></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="flex items-center gap-4">
-                                            <p class="block antialiased font-sans text-sm leading-normal text-orange-gray-900 font-bold">Add Progress Track</p>
-                                        </div>
-                                    </td>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <p class="block antialiased font-sans text-xs font-medium text-orange-gray-600">$3,000</p>
-                                    </td>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="w-10/12">
-                                            <p class="antialiased font-sans mb-1 block text-xs font-medium text-orange-gray-600">10%</p>
-                                            <div class="flex flex-start bg-orange-gray-50 overflow-hidden w-full rounded-sm font-sans text-xs font-medium h-1">
-                                                <div class="flex justify-center items-center h-full bg-gradient-to-tr from-orange-600 to-orange-400 text-white" style="width: 10%;"></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="flex items-center gap-4">
-                                            <p class="block antialiased font-sans text-sm leading-normal text-orange-gray-900 font-bold">Fix Platform Errors</p>
-                                        </div>
-                                    </td>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <p class="block antialiased font-sans text-xs font-medium text-orange-gray-600">Not set</p>
-                                    </td>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="w-10/12">
-                                            <p class="antialiased font-sans mb-1 block text-xs font-medium text-orange-gray-600">100%</p>
-                                            <div class="flex flex-start bg-orange-gray-50 overflow-hidden w-full rounded-sm font-sans text-xs font-medium h-1">
-                                                <div class="flex justify-center items-center h-full bg-gradient-to-tr from-green-600 to-green-400 text-white" style="width: 100%;"></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="flex items-center gap-4">
-                                            <p class="block antialiased font-sans text-sm leading-normal text-orange-gray-900 font-bold">Launch our Mobile App</p>
-                                        </div>
-                                    </td>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <p class="block antialiased font-sans text-xs font-medium text-orange-gray-600">$20,500</p>
-                                    </td>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="w-10/12">
-                                            <p class="antialiased font-sans mb-1 block text-xs font-medium text-orange-gray-600">100%</p>
-                                            <div class="flex flex-start bg-orange-gray-50 overflow-hidden w-full rounded-sm font-sans text-xs font-medium h-1">
-                                                <div class="flex justify-center items-center h-full bg-gradient-to-tr from-green-600 to-green-400 text-white" style="width: 100%;"></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="flex items-center gap-4">
-                                            <p class="block antialiased font-sans text-sm leading-normal text-orange-gray-900 font-bold">Add the New Pricing Page</p>
-                                        </div>
-                                    </td>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <p class="block antialiased font-sans text-xs font-medium text-orange-gray-600">$500</p>
-                                    </td>
-                                    <td class="py-3 px-5 border-b border-orange-gray-50">
-                                        <div class="w-10/12">
-                                            <p class="antialiased font-sans mb-1 block text-xs font-medium text-orange-gray-600">25%</p>
-                                            <div class="flex flex-start bg-orange-gray-50 overflow-hidden w-full rounded-sm font-sans text-xs font-medium h-1">
-                                                <div class="flex justify-center items-center h-full bg-gradient-to-tr from-orange-600 to-orange-400 text-white" style="width: 25%;"></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div> -->
+           
         </div>
         <div class="text-orange-gray-600">
             <footer class="py-2">

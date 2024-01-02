@@ -40,16 +40,13 @@
 
         }
     </style>
-=======
     <!-- <link href="../public/css/tailwind.css" rel="stylesheet"> -->
->>>>>>> 0cca626f68fb5125db3311f25d1be17c8edf59bb
+
     <script src="https://cdn.tailwindcss.com"></script>
->>>>>>> 2418fdf960035f3d61bd9ca68c59857d5844f1a6
 </head>
 
 <body>
 
-<<<<<<< HEAD
 <!--        navbar        -->
 <?php
 include 'includes/navbar.php';
@@ -61,7 +58,6 @@ include 'includes/navbar.php';
 =======
     <!--        navbar        -->
     <?php
-<<<<<<< HEAD
     include 'Include/navbar.php';
     ?>
 
