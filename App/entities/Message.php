@@ -1,4 +1,6 @@
 <?php
+namespace App\entities;
+
 class Message {
     private $id;
     private $content;

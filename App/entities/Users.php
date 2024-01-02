@@ -1,4 +1,5 @@
 <?php
+namespace App\entities;
 class User {
     private $id;
     private $username;

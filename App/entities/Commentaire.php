@@ -1,4 +1,5 @@
 <?php
+namespace App\entities;
 class Commentaire {
     private $id;
     private $content;

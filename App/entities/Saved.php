@@ -1,4 +1,6 @@
 <?php
+namespace App\entities;
+
 class Saved {
     private $user_id;
     private $immobilier_id;

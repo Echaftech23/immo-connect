@@ -1,6 +1,7 @@
 <?php
-
-class UserModel implements UserDaoInterface
+use App\Dao\DaoInterface;
+use App\entities\User;
+class UserModel implements DaoInterface
 {
     private $pdo;
 

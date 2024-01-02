@@ -1,4 +1,6 @@
 <?php
+namespace App\entities;
+
 class Transaction {
     private $id;
     private $details;

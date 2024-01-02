@@ -1,15 +1,5 @@
 <?php
-
-
-
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> dev
->>>>>>> ghizlane
+namespace App\Dao;
 interface DaoInterface
 {
     public function getAll();
@@ -18,14 +8,5 @@ interface DaoInterface
     public function getById($id);
     public function deleteById($id);
 
-<<<<<<< HEAD
 }
->>>>>>> ghizlane
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> ghizlane
->>>>>>> dev
->>>>>>> ghizlane
+
