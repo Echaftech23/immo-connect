@@ -174,7 +174,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-blue-100 pl-4 pe-7 side-container fixed h-screen overflow-hidden" style="width: calc(100% - 560px);">
+                    <div class="bg-blue-100 pl-4 pe-7 side-container fixed overflow-hidden" style="width: calc(100% - 560px); height: 390px;">
                         <div class="flex justify-between">
                             <div class="receiver mb-10">
                                 <div class="flex">
@@ -199,7 +199,7 @@
 
                             <div class="sender float-right">
                                 <p class="my-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
-                                <span class="block text-gray-500 text-xs">Today 11:56</span>
+                                <span class="block text-gray-500 text-xs float-right">Today 11:56</span>
                             </div>
                         </div>
 
@@ -215,7 +215,39 @@
 
                             <div class="sender float-right">
                                 <p class="my-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
-                                <span class="block text-gray-500 text-xs">Today 11:56</span>
+                                <span class="block text-gray-500 text-xs float-right">Today 11:56</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-20">
+                            <div class="receiver">
+                                <div class="flex">
+                                    <img src="../../public/img/image-1.png" alt="image" width="100px">
+                                    <img src="../../public/img/image.png" class="block ml-4" alt="image" width="100px">
+                                </div>
+                                <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
+                                <span class="block text-gray-500 text-xs">Today 11:55</span>
+                            </div>
+
+                            <div class="sender float-right">
+                                <p class="my-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
+                                <span class="block text-gray-500 text-xs float-right">Today 11:56</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-20">
+                            <div class="receiver">
+                                <div class="flex">
+                                    <img src="../../public/img/image-2.png" alt="image" width="100px">
+                                    <img src="../../public/img/image-2.png" class="block ml-4" alt="image" width="100px">
+                                </div>
+                                <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
+                                <span class="block text-gray-500 text-xs">Today 11:55</span>
+                            </div>
+
+                            <div class="sender float-right">
+                                <p class="my-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
+                                <span class="block text-gray-500 text-xs float-right">Today 11:56</span>
                             </div>
                         </div>
                     </div>
