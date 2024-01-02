@@ -1,4 +1,5 @@
 <?php
+namespace App\entities;
 class Immobilier {
     private $id;
     private $title;
@@ -154,3 +155,4 @@ class Immobilier {
         $this->type_id = $type_id;
     }
 }
+

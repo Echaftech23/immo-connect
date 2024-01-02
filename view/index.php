@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <link href="../public/css/tailwind.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
@@ -32,23 +31,19 @@
             border-image-slice: 1;
             width: 200px;
             background-color: #56ff5615;
-
-
-
         }
     </style>
-=======
-    <!-- <link href="../public/css/tailwind.css" rel="stylesheet"> -->
+
     <script src="https://cdn.tailwindcss.com"></script>
->>>>>>> 2418fdf960035f3d61bd9ca68c59857d5844f1a6
+
 </head>
 
 <body>
 
     <!--        navbar        -->
     <?php
-<<<<<<< HEAD
-    include 'Include/navbar.php';
+
+    include './includes/navbar.php';
     ?>
 
 
@@ -129,17 +124,13 @@
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
-=======
-    include 'includes/navbar.php';
-    ?>
->>>>>>> 2418fdf960035f3d61bd9ca68c59857d5844f1a6
+
 
 
     <!--      main     -->
 
         </div>
 
-<<<<<<< HEAD
     </div>
     <div class="container mx-auto mt-10 p-4">
         <div class="mt-10">
@@ -284,17 +275,6 @@
 
 
 
-    <!--        footer        -->
-    <?php
-    include 'Include/footer.php';
-    ?>
-    <!--             script pour navbar                                    -->
-    <script type="text/javascript" src="../public/Js/navbarScript.js"></script>
-    <script type="text/javascript" src="../public/Js/index.js"></script>
-=======
-    <h1 class="text-3xl border-green-600 font-bold underline">
-        Hello world!
-    </h1>
 
     <!--        footer        -->
     <?php
@@ -302,7 +282,6 @@
     ?>
     <!--             script pour navbar                                    -->
     <script type="text/javascript" src="../public/js/navbarScript.js"></script>
->>>>>>> 2418fdf960035f3d61bd9ca68c59857d5844f1a6
 </body>
 
 </html>
