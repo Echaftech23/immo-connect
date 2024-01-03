@@ -1,4 +1,6 @@
 <?php
+namespace App\entities;
+
 class Role {
     private $id;
     private $name;

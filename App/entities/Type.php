@@ -1,4 +1,6 @@
 <?php
+namespace App\entities;
+
 class Type {
     private $id;
     private $name;

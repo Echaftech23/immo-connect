@@ -4,12 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <link href="../public/css/tailwind.css" rel="stylesheet">
-=======
-<<<<<<< HEAD
-    <link href="../public/css/tailwind.css" rel="stylesheet">
-    <link rel="stylesheet"
+<link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
     <style>
         body {
@@ -35,18 +31,22 @@
             border-image-slice: 1;
             width: 200px;
             background-color: #56ff5615;
-
-
-
         }
     </style>
+<<<<<<< HEAD
     <!-- <link href="../public/css/tailwind.css" rel="stylesheet"> -->
 
     <script src="https://cdn.tailwindcss.com"></script>
+=======
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+>>>>>>> b8f9597ff4f71d9210f88a65f7b897167e0a6a79
 </head>
 
 <body>
 
+<<<<<<< HEAD
 <!--        navbar        -->
 <?php
 include 'includes/navbar.php';
@@ -59,6 +59,12 @@ include 'includes/navbar.php';
     <!--        navbar        -->
     <?php
     include 'Include/navbar.php';
+=======
+    <!--        navbar        -->
+    <?php
+
+    include './includes/navbar.php';
+>>>>>>> b8f9597ff4f71d9210f88a65f7b897167e0a6a79
     ?>
 
 
@@ -139,17 +145,13 @@ include 'includes/navbar.php';
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
-=======
-    include 'includes/navbar.php';
-    ?>
->>>>>>> 2418fdf960035f3d61bd9ca68c59857d5844f1a6
+
 
 
     <!--      main     -->
 
         </div>
 
-<<<<<<< HEAD
     </div>
     <div class="container mx-auto mt-10 p-4">
         <div class="mt-10">
@@ -294,37 +296,13 @@ include 'includes/navbar.php';
 
 
 
-    <!--        footer        -->
-    <?php
-    include 'Include/footer.php';
-    ?>
-    <!--             script pour navbar                                    -->
-    <script type="text/javascript" src="../public/Js/navbarScript.js"></script>
-    <script type="text/javascript" src="../public/Js/index.js"></script>
-=======
-    <h1 class="text-3xl border-green-600 font-bold underline">
->>>>>>> 0cca626f68fb5125db3311f25d1be17c8edf59bb
-        Hello world!
-    </h1> -->
 
-<<<<<<< HEAD
-
-
-<!--        footer        -->
-<?php
-include 'includes/footer.php';
-?>
-<!--             script pour navbar                                    -->
-<script type="text/javascript" src="../public/js/navbarScript.js"></script> 
-=======
     <!--        footer        -->
     <?php
     include 'includes/footer.php';
     ?>
     <!--             script pour navbar                                    -->
     <script type="text/javascript" src="../public/js/navbarScript.js"></script>
->>>>>>> 2418fdf960035f3d61bd9ca68c59857d5844f1a6
->>>>>>> 0cca626f68fb5125db3311f25d1be17c8edf59bb
 </body>
 
 </html>
