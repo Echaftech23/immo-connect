@@ -63,7 +63,7 @@
             </div>
 
             <div class="lg:w-1/2">
-                <img src="../public/Img/homeImage.png" alt="Your Image" class="w-full rounded">
+                <img src="public/Img/log-light.png" alt="Home Image" class="w-full rounded">
             </div>
 
         </div>
@@ -76,50 +76,50 @@
         <div class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
 
             <div class="bg-red-500 p-3 rounded ">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-fuchsia-200 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-green-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-blue-300 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-pink-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-lime-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
 
             <div class="bg-green-200 p-3 rounded ">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-fuchsia-200 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
@@ -142,7 +142,7 @@
                         dictum nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
                 </div>
                 <div class="md:w-1/2 mb-4 md:mb-0 md:mr-4">
-                    <img src="../public/Img/Horizontal.png" alt="Image 3"
+                    <img src="public/Img/Horizontal.png" alt="Image 3"
                         class="w-fit object-cover rounded mb-4 md:mb-0 md:mr-4">
                 </div>
             </div>

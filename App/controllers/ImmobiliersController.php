@@ -3,6 +3,7 @@ namespace App\controllers;
 require __DIR__ . '/../../vendor/autoload.php';
 
 use App\entities\Immobilier;
+use App\models\CommentaireModel;
 use App\models\ImmobilierModel;
 
 class ImmobiliersController{
@@ -20,9 +21,15 @@ class ImmobiliersController{
         $immobilierModel= new ImmobilierModel() ;
         $immobilier=$immobilierModel->getById($id);
         
+        $commentaireModel= new CommentaireModel();
+        $comments=$commentaireModel->getAll($id);
         include '../../view/details.php';
+        
+        
 
     }
+
+
 }
 
 

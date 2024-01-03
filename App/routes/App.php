@@ -13,7 +13,7 @@ $router->setRoutes([
         'annoucement/details'=>['ImmobiliersController', 'getImmobilier'],
     ],
     'POST' => [
-        'submit' => ['HomeController', 'save']
+        'annoucement/comment/add' => ['CommentaireController', 'save']
     ]
 ]);
 

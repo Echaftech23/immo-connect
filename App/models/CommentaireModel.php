@@ -53,7 +53,7 @@ class CommentaireModel
                     $commentaireData->commentaire_id,
                     $commentaireData->content,
                     $commentaireData->image,
-                    $commentaireData->datePubliction,
+                    $commentaireData->datePublication,
                     $commentaireData->username,
                     $commentaireData->immobilier_title,
                 );
