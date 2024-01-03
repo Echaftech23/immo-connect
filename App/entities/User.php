@@ -1,6 +1,7 @@
 <?php
 namespace App\entities;
-class User {
+
+class User extends GenericEntity {
     private $id;
     private $username;
     private $email;
@@ -114,4 +115,5 @@ class User {
     public function setRoleId($role_id) {
         $this->role_id = $role_id;
     }
+   
 }

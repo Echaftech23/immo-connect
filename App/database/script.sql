@@ -59,7 +59,7 @@ CREATE TABLE immobiliers (
     image5 VARCHAR
 (255),
     status ENUM
-('Active', 'Inactive', 'Sold'), -- Adjust status values as needed
+('Active', 'Inactive', 'Sold'), 
     rooms INT,
     flooring_type VARCHAR
 (255),
@@ -136,3 +136,6 @@ CREATE table saved
 
 
 );
+ALTER TABLE immobiliers
+ADD COLUMN user_id INT,
+ADD FOREIGN KEY (user_id) REFERENCES users(id);

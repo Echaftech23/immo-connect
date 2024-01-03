@@ -46,18 +46,18 @@
                 </div>
 
                 <div class="ml-4">
-                    <p>Status: For Sale</p>
+                    <p>Status: <?= $immobilier->getStatus() ?></p>
                 </div>
             </div>
 
             <div class="mt-4">
-                <p>Number of Rooms: 3</p>
-                <p>Kitchen: 1</p>
-                <p>Bathroom: 2</p>
+                <p>Number of Rooms:<?= $immobilier->getRooms() ?></p>
+                <p>Floor type : <?= $immobilier->getFlooringType() ?></p>
+                <p>Bathroom: <?= $immobilier->getBathrooms() ?></p>
             </div>
 
             <div class=" items-center mt-4">
-                <p class="text-2xl font-bold">$500,000</p>
+                <p class="text-2xl font-bold">$<?= $immobilier->getPrice() ?></p>
                 <button class="ml-4 bg-green-500 text-white px-4 py-2 rounded-3xl">Buy Now</button>
             </div>
         </div>

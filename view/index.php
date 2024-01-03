@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../public/css/tailwind.css" rel="stylesheet">
+    <link href="public/css/tailwind.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
     <style>
@@ -43,7 +43,7 @@
     <!--        navbar        -->
     <?php
 
-    include './includes/navbar.php';
+    include 'includes/navbar.php';
     ?>
 
 
@@ -276,11 +276,11 @@
 
 
 
-    <!--        footer        -->
+    
     <?php
     include 'includes/footer.php';
     ?>
-    <!--             script pour navbar                                    -->
+                                       
     <script type="text/javascript" src="../public/js/navbarScript.js"></script>
 </body>
 
