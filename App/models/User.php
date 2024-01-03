@@ -1,11 +1,13 @@
 <?php
+
 use App\Dao\DaoInterface;
 use App\entities\User;
-class UserModel implements DaoInterface
+
+class UserModel extends User implements DaoInterface 
 {
     private $pdo;
 
-    public function __construct(PDO $pdo)
+    public function __construct($pdo)
     {
         $this->pdo = $pdo;
     }
@@ -17,7 +19,7 @@ class UserModel implements DaoInterface
         return $stmt->fetchAll(PDO::FETCH_CLASS, 'User');
     }
 
-    public function save(User $user)
+    public function save($user)
     {
         $stmt = $this->pdo->prepare("
             INSERT INTO users (username, email, password, image, phone, rate, status, isLogin, location_id, role_id)
@@ -43,7 +45,7 @@ class UserModel implements DaoInterface
         }
     }
 
-    public function update(User $user)
+    public function update($user)
     {
         $stmt = $this->pdo->prepare("
             UPDATE users
