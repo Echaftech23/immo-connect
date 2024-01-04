@@ -28,39 +28,39 @@
             include "../includes/sidebar.php";
             ?>
             </ul>
-          </div>
-        </aside>
+    </div>
+    </aside>
 
-        <div class="bg-black fixed w-full z-50 flex flex-wrap items-center  justify-between ...  none uppercase transition-all disabled:shadow-none active:bg-orange-gray-500/30 lg:hidden">
-            <a class="ml-1" href="#"><img class="mx-5 my-1" src="../../public/img/IMMOCONNECT1.png" alt="dash"></a>
-            <button class=" mr-7 my-1 relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
-                <img class="navbar-burger" src="../../public/img/Group 1000003579.png" alt="dash">
-                <img class="hidden navbar-close" src="../../public/img/Group 1000003606.png" alt="dash">
-                <!-- </span> -->
-            </button>
-        </div>
-        <div class="navbar-menu relative  z-50 right-0 hidden">
-            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <div class="bg-black fixed w-full z-50 flex flex-wrap items-center  justify-between ...  none uppercase transition-all disabled:shadow-none active:bg-orange-gray-500/30 lg:hidden">
+        <a class="ml-1" href="#"><img class="mx-5 my-1" src="../../public/img/IMMOCONNECT1.png" alt="dash"></a>
+        <button class=" mr-7 my-1 relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
+            <img class="navbar-burger" src="../../public/img/Group 1000003579.png" alt="dash">
+            <img class="hidden navbar-close" src="../../public/img/Group 1000003606.png" alt="dash">
+            <!-- </span> -->
+        </button>
+    </div>
+    <div class="navbar-menu relative  z-50 right-0 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
 
-            <aside class="bg-gradient-to-br from-gray-800 to-gray-900 absolute w-full max-w-80  right-0">
+        <aside class="bg-gradient-to-br from-gray-800 to-gray-900 absolute w-full max-w-80  right-0">
 
 
-                <?php
+            <?php
 
-                include "../includes/sidebar.php";
-                ?>
-                <li>
-                    <a class="" href="#">
-                        <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
-                            <img src="../../public/img/Bell (2).png" alt="image">
-                            <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">Notifications</p>
-                        </button>
-                    </a>
-                </li>
+            include "../includes/sidebar.php";
+            ?>
+            <li>
+                <a class="" href="#">
+                    <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
+                        <img src="../../public/img/Bell (2).png" alt="image">
+                        <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">Notifications</p>
+                    </button>
+                </a>
+            </li>
 
-                </ul>
-        </div>
-        </aside>
+            </ul>
+    </div>
+    </aside>
     </div>
 
 
@@ -89,20 +89,20 @@
                         </div>
                     </div>
 
-                    
+
                     <a href="#">
                         <button class="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 hidden items-center gap-1 px-4 lg:flex" type="button">
-                            
+
                             <img src="../../public/img/Bell (1).png" alt="nothification">
                         </button>
                         <button class="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
                             <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                                
+
                                 <img src="../../public/img/Bell (1).png" alt="nothification">
                             </span>
                         </button>
                     </a>
-                    
+
 
                     <div class="dropdown float-right relative inline-block ">
                         <button class="dropbtn"><img src="../../public/img/Ellipse 300.png" alt=""></button>
@@ -376,7 +376,7 @@
                 </div>
 
             </div>
-           
+
         </div>
         <div class="text-orange-gray-600">
             <footer class="py-2">

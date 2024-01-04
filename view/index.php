@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../public/css/tailwind.css" rel="stylesheet">
-<link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
+    <link href="public/css/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -22,7 +21,7 @@
             border-image-slice: 1;
             width: 200px;
             background-color: #56ff5615;
-           
+
         }
 
         .border-gradient-green1 {
@@ -33,38 +32,17 @@
             background-color: #56ff5615;
         }
     </style>
-<<<<<<< HEAD
-    <!-- <link href="../public/css/tailwind.css" rel="stylesheet"> -->
-
-    <script src="https://cdn.tailwindcss.com"></script>
-=======
 
     <script src="https://cdn.tailwindcss.com"></script>
 
->>>>>>> b8f9597ff4f71d9210f88a65f7b897167e0a6a79
 </head>
 
 <body>
 
-<<<<<<< HEAD
-<!--        navbar        -->
-<?php
-include 'includes/navbar.php';
-?>
-
-    
-<!--      main     -->
-<!-- <h1 class="text-3xl font-bold underline bg-blue-200 text-emerald-500">
-=======
-    <!--        navbar        -->
-    <?php
-    include 'Include/navbar.php';
-=======
     <!--        navbar        -->
     <?php
 
-    include './includes/navbar.php';
->>>>>>> b8f9597ff4f71d9210f88a65f7b897167e0a6a79
+    include 'includes/navbar.php';
     ?>
 
 
@@ -74,7 +52,8 @@ include 'includes/navbar.php';
 
             <div class="lg:w-1/2 mb-8 lg:mb-0">
                 <h1 class="text-6xl font-bold mb-4">Let's go! <br> <span class="text-orange-600">IC</span> has arrived &
-                    <br>It's waiting for you</h1>
+                    <br>It's waiting for you
+                </h1>
                 <p class="text-stone-400 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
                     dictum nisi, vel malesuada eros commodo nec. Nulla facilisi. </p>
                 <div class="flex items-center space-x-4 mb-4">
@@ -84,7 +63,7 @@ include 'includes/navbar.php';
             </div>
 
             <div class="lg:w-1/2">
-                <img src="../public/Img/homeImage.png" alt="Your Image" class="w-full rounded">
+                <img src="../public/Img/log-light.png" alt="Home Image" class="w-full rounded">
             </div>
 
         </div>
@@ -103,44 +82,44 @@ include 'includes/navbar.php';
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-fuchsia-200 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-green-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-blue-300 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-pink-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-lime-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
 
             <div class="bg-green-200 p-3 rounded ">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-fuchsia-200 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
@@ -148,7 +127,7 @@ include 'includes/navbar.php';
 
 
 
-    <!--      main     -->
+            <!--      main     -->
 
         </div>
 
@@ -163,8 +142,7 @@ include 'includes/navbar.php';
                         dictum nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
                 </div>
                 <div class="md:w-1/2 mb-4 md:mb-0 md:mr-4">
-                    <img src="../public/Img/Horizontal.png" alt="Image 3"
-                        class="w-fit object-cover rounded mb-4 md:mb-0 md:mr-4">
+                    <img src="../public/Img/Horizontal.png" alt="Image 3" class="w-fit object-cover rounded mb-4 md:mb-0 md:mr-4">
                 </div>
             </div>
 
@@ -279,16 +257,13 @@ include 'includes/navbar.php';
             </div>
         </div>
 
-        <div class="mt-10 items-center p-20"
-            style="background-image: url(../public/Img/background_subscribe.png); background-size:cover;">
+        <div class="mt-10 items-center p-20" style="background-image: url(../public/Img/background_subscribe.png); background-size:cover;">
             <h1 class="text-4xl text-center text-white font-bold mb-4">Subscribe for Exclusive Deals & Offers</h1>
 
 
             <form class="max-w-md mx-auto ">
-                <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded"
-                    placeholder="Your email address" required>
-                <button type="submit"
-                    class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 focus:outline-none focus:shadow-outline-orange active:bg-orange-800">Subscribe</button>
+                <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" placeholder="Your email address" required>
+                <button type="submit" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 focus:outline-none focus:shadow-outline-orange active:bg-orange-800">Subscribe</button>
             </form>
         </div>
 
@@ -297,11 +272,11 @@ include 'includes/navbar.php';
 
 
 
-    <!--        footer        -->
+
     <?php
     include 'includes/footer.php';
     ?>
-    <!--             script pour navbar                                    -->
+
     <script type="text/javascript" src="../public/js/navbarScript.js"></script>
 </body>
 

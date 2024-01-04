@@ -1,38 +1,45 @@
 <?php
-session_start();
+
+require_once '../../vendor/autoload.php';
 
 use App\routes\Router;
-
-require __DIR__ . '/../../vendor/autoload.php';
-
-
-
-
 
 $router = new Router();
 
 $router->setRoutes([
     'GET' => [
-        'signup' => ['AuthController', 'signup'],
-        'signin' => ['AuthController', 'login'],
+
+        '' => ['HomeController', 'index'],
+        'home' => ['HomeController', 'index'],
+        'annoucement' => ['ImmobiliersController', 'index'],
+        'annoucement/details' => ['ImmobiliersController', 'getImmobilier'],
+        'annoucement/make-transaction' => ['TransactionController', 'index'],
+        'signup' => ['UserController', 'signup'],
+        'signin' => ['UserController', 'login'],
+        'imobilier' => ['ImmobiliersController', 'vendeur'],
+        'add-imobilier' => ['ImmobiliersController', 'vendeurImmobilier'],
+        'chat' => ['UserController', 'chat']
+
     ],
     'POST' => [
-    ],
+        'annoucement/comment/add' => ['CommentaireController', 'save'],
+        'signup' => ['UserController', 'signup']
+    ]
 ]);
-
-
 
 if (isset($_GET['url'])) {
     $uri = trim($_GET['url'], '/');
-    $method = $_SERVER['REQUEST_METHOD'];
+    
+    $methode = $_SERVER['REQUEST_METHOD'];
 
     try {
-        $route = $router->getRoute($method, $uri);
-       /*  var_dump($router->getRoute($method, $uri)) ; */
+        $route = $router->getRoute($methode, $uri);
 
         if ($route) {
             list($controllerName, $methodName) = $route;
+
             $controllerClass = 'App\\controllers\\' . ucfirst($controllerName);
+
             $controller = new $controllerClass();
 
             if ($methodName) {
@@ -48,10 +55,6 @@ if (isset($_GET['url'])) {
             throw new Exception('Route not found.');
         }
     } catch (Exception $e) {
-        // Log the exception or render a user-friendly error page
         echo 'Caught exception: ', $e->getMessage(), "\n";
-        
     }
-} else {
-    echo 'noo';
 }

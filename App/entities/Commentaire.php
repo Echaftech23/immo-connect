@@ -1,6 +1,9 @@
 <?php
+
 namespace App\entities;
-class Commentaire {
+
+class Commentaire
+{
     private $id;
     private $content;
     private $image;
@@ -8,7 +11,8 @@ class Commentaire {
     private $user_id;
     private $immobilier_id;
 
-    public function __construct($id, $content, $image, $datePublication, $user_id, $immobilier_id) {
+    public function __construct($id, $content, $image, $datePublication, $user_id, $immobilier_id)
+    {
         $this->id = $id;
         $this->content = $content;
         $this->image = $image;
@@ -17,51 +21,63 @@ class Commentaire {
         $this->immobilier_id = $immobilier_id;
     }
 
-    public function getId() {
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function setId($id) {
+    public function setId($id)
+    {
         $this->id = $id;
     }
 
-    public function getContent() {
+    public function getContent()
+    {
         return $this->content;
     }
 
-    public function setContent($content) {
+    public function setContent($content)
+    {
         $this->content = $content;
     }
 
-    public function getImage() {
+    public function getImage()
+    {
         return $this->image;
     }
 
-    public function setImage($image) {
+    public function setImage($image)
+    {
         $this->image = $image;
     }
 
-    public function getDatePublication() {
+    public function getDatePublication()
+    {
         return $this->datePublication;
     }
 
-    public function setDatePublication($datePublication) {
+    public function setDatePublication($datePublication)
+    {
         $this->datePublication = $datePublication;
     }
 
-    public function getUserId() {
+    public function getUserId()
+    {
         return $this->user_id;
     }
 
-    public function setUserId($user_id) {
+    public function setUserId($user_id)
+    {
         $this->user_id = $user_id;
     }
 
-    public function getImmobilierId() {
+    public function getImmobilierId()
+    {
         return $this->immobilier_id;
     }
 
-    public function setImmobilierId($immobilier_id) {
+    public function setImmobilierId($immobilier_id)
+    {
         $this->immobilier_id = $immobilier_id;
     }
 }
