@@ -2,8 +2,13 @@
 
 namespace App\entities;
 
+<<<<<<< HEAD
 class User
 {
+=======
+class User extends GenericEntity {
+    private $id;
+>>>>>>> meqdar
     private $username;
     private $email;
     private $password;
@@ -128,4 +133,5 @@ class User
     {
         $this->role_id = $role_id;
     }
+   
 }
