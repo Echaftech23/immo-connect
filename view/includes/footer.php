@@ -2,7 +2,7 @@
   <div class="max-w-screen-xl px-5 py-10 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 space-x-40">
       <div>
-        <a href="#"><img width="260" src="../../public/Img/IMMOCONNECT.png" class="mr-5 h-6 sm:h-9" alt="logo" /></a>
+        <a href="#"><img width="260" src="public/Img/IMMOCONNECT.png" class="mr-5 h-6 sm:h-9" alt="logo" /></a>
         <p class="max-w-xs mt-4 text-sm text-gray-600">
         Come and be part of this incredible
            journey that we are creating.

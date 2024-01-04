@@ -13,10 +13,11 @@ $router = new Router();
 
 $router->setRoutes([
     'GET' => [
-        'signup' => ['AuthController', 'signup'],
-        'signin' => ['AuthController', 'login'],
+        'signup' => ['UserController', 'signup'],
+        'signin' => ['UserController', 'login'],
     ],
     'POST' => [
+        'signup' => ['UserController', 'signup']
     ],
 ]);
 
@@ -28,7 +29,6 @@ if (isset($_GET['url'])) {
 
     try {
         $route = $router->getRoute($method, $uri);
-       /*  var_dump($router->getRoute($method, $uri)) ; */
 
         if ($route) {
             list($controllerName, $methodName) = $route;

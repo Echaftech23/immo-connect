@@ -1,15 +1,15 @@
-CREATE DATABASE immoConnect ;
-use immoConnect;
+CREATE DATABASE immo_connect ;
+use immo_connect;
 
 CREATE TABLE roles
 (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE locations
 (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     region VARCHAR(255) NOT NULL,
     city VARCHAR(255) NOT NULL,
     avenue VARCHAR(255) NOT NULL
@@ -24,7 +24,7 @@ CREATE TABLE types
 
 CREATE TABLE users
 (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
