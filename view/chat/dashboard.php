@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../public/css/tailwind.css" rel="stylesheet">
+    <link href="public/css/tailwind.css" rel="stylesheet">
     <!-- Font Awesome Free CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -31,11 +31,11 @@
 
                 <div class="relative border-b border-white/20">
                     <a class="flex items-center gap-4 py-6 px-8" href="#">
-                        <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white"><img width="180" src="../../public/Img/IMMOCONNECT1.png" alt="logo"></h6>
+                        <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white"><img width="180" src="public/Img/IMMOCONNECT1.png" alt="logo"></h6>
                     </a>
                     <button class="navbar-close mr-6 mt-5 middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-8 max-w-[32px] h-8 max-h-[32px] rounded-lg text-xs text-white hover:bg-white/10 active:bg-white/30 absolute right-0 top-0 grid rounded-br-none rounded-tl-none lg:hidden" type="button">
                         <span class="absolute top-1/2 h-10 w-10 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                            <img class="mr-1" src="../../public/img/Group 1000003606.png" alt="dash">
+                            <img class="mr-1" src="public/img/Group 1000003606.png" alt="dash">
                         </span>
                     </button>
                 </div>
@@ -44,7 +44,7 @@
                         <li>
                             <a aria-current="page" class="active" href="#">
                                 <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg bg-gradient-to-tr from-orange-600 to-orange-400 text-white shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/40 active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize" type="button">
-                                    <img src="../../public/img/ChartBar.png" alt="dash">
+                                    <img src="public/img/ChartBar.png" alt="dash">
                                     <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">dashboard</p>
                                 </button>
                             </a>
@@ -52,7 +52,7 @@
                         <li>
                             <a class="" href="#">
                                 <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
-                                    <img src="../../public/img/Stack (1).png" alt="profile">
+                                    <img src="public/img/Stack (1).png" alt="profile">
                                     <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">My saved </p>
                                 </button>
                             </a>
@@ -60,7 +60,7 @@
                         <li>
                             <a class="" href="#">
                                 <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
-                                    <img src="../../public/img/CreditCard (1).png" alt="image">
+                                    <img src="public/img/CreditCard (1).png" alt="image">
                                     <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">My Payment</p>
                                 </button>
                             </a>
@@ -68,7 +68,7 @@
                         <li>
                             <a class="" href="#">
                                 <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
-                                    <img src="../../public/img/ChatCircleDots (1).png" alt="image">
+                                    <img src="public/img/ChatCircleDots (1).png" alt="image">
                                     <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">Message</p>
                                     <span class="ml-4 bg-orange-500 w-6 rounded-2xl">3</span>
                                 </button>
@@ -77,7 +77,7 @@
                         <li>
                             <a class="" href="#">
                                 <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
-                                    <img src="../../public/img/Gear (1).png" alt="image">
+                                    <img src="public/img/Gear (1).png" alt="image">
                                     <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">Settings</p>
                                 </button>
                             </a>
@@ -85,7 +85,7 @@
                         <li>
                             <a class="" href="#">
                                 <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
-                                    <img src="../../public/img/Vector (1).png" alt="image">
+                                    <img src="public/img/Vector (1).png" alt="image">
                                     <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">My Profile</p>
                                 </button>
                             </a>
@@ -93,7 +93,7 @@
                         <li>
                             <a class="" href="#">
                                 <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
-                                    <img src="../../public/img/SignOut (1).png" alt="image">
+                                    <img src="public/img/SignOut (1).png" alt="image">
                                     <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">Sign-out</p>
                                 </button>
                             </a>
@@ -103,10 +103,10 @@
             </aside>
 
             <div class="bg-black fixed w-full z-50 flex flex-wrap items-center  justify-between ...  none uppercase transition-all disabled:shadow-none active:bg-orange-gray-500/30 lg:hidden">
-                <a class="ml-1" href="#"><img class="mx-5 my-1" src="../../public/img/IMMOCONNECT1.png" alt="dash"></a>
+                <a class="ml-1" href="#"><img class="mx-5 my-1" src="public/img/IMMOCONNECT1.png" alt="dash"></a>
                 <button class=" mr-7 my-1 relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
-                    <img class="navbar-burger" src="../../public/img/Group 1000003579.png" alt="dash">
-                    <img class="hidden navbar-close" src="../../public/img/Group 1000003606.png" alt="dash">
+                    <img class="navbar-burger" src="public/img/Group 1000003579.png" alt="dash">
+                    <img class="hidden navbar-close" src="public/img/Group 1000003606.png" alt="dash">
                 </button>
             </div>
         </div>
@@ -115,7 +115,7 @@
             <!-- Header -->
             <div class=" flex justify-between p-4 border-b pe-5">
                 <div class="flex items-center">
-                    <button><img src="../../public/img/element-3.png" alt="icon" class="max-w-5 max-h-5"></button>
+                    <button><img src="public/img/element-3.png" alt="icon" class="max-w-5 max-h-5"></button>
                     <div class="flex items-center justify-items-center ms-8 p-3 ps-3 pe-10 rounded-2xl bg-gray-200 w-80">
                         <i class="fa-solid fa-magnifying-glass text-sm pe-2"></i>
                         <input type="text" name="filter-converstion" placeholder="Search in dashboard..." class="bg-transparent outline-none text-sm -mt-1">
@@ -145,7 +145,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <img src="../../public/img/Avatar-Image.png" alt="avatar" width="48" height="48">
+                            <img src="public/img/Avatar-Image.png" alt="avatar" width="48" height="48">
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                             <span class="font-semibold">Messaging</span>
                             <span class="absolute bg-red-500 rounded text-center py-1 px-2 text-white text-xs" style="top: 10px; left: 95px; line-height: 20px;">187</span>
                             <div class=" flex items-center justify-center">
-                                <span class="text-sm pe-1">Agents</span> <img src="../../public/img/sort.png" alt="filter-icon" width="24px">
+                                <span class="text-sm pe-1">Agents</span> <img src="public/img/sort.png" alt="filter-icon" width="24px">
                             </div>
                         </div>
                         <div class="flex items-center justify-items-center p-3 ps-3 pe-10 mb-6 bg-gray-200">
@@ -172,7 +172,7 @@
                         <div class="side-container" style="height: calc(140vh - 400px);">
 
                             <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo.png" alt="filter-icon" width="52">
+                                <img src="public/img/photo.png" alt="filter-icon" width="52">
                                 <div class="w-full ms-2">
                                     <div class="flex justify-between text-sm mb-2">
                                         <p class=" font-medium">Eten Hunt</p>
@@ -183,7 +183,7 @@
                             </section>
 
                             <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo-1.png" alt="filter-icon" width="52">
+                                <img src="public/img/photo-1.png" alt="filter-icon" width="52">
                                 <div class="w-full ms-2">
                                     <div class="flex justify-between text-sm mb-2">
                                         <p class=" font-medium">Eten Hunt</p>
@@ -194,7 +194,7 @@
                             </section>
 
                             <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo-2.png" alt="filter-icon" width="52">
+                                <img src="public/img/photo-2.png" alt="filter-icon" width="52">
                                 <div class="w-full ms-2">
                                     <div class="flex justify-between text-sm mb-2">
                                         <p class=" font-medium">Eten Hunt</p>
@@ -205,7 +205,7 @@
                             </section>
 
                             <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo-3.png" alt="filter-icon" width="52">
+                                <img src="public/img/photo-3.png" alt="filter-icon" width="52">
                                 <div class="w-full ms-2">
                                     <div class="flex justify-between text-sm mb-2">
                                         <p class=" font-medium">Eten Hunt</p>
@@ -216,7 +216,7 @@
                             </section>
 
                             <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo-1.png" alt="filter-icon" width="52">
+                                <img src="public/img/photo-1.png" alt="filter-icon" width="52">
                                 <div class="w-full ms-2">
                                     <div class="flex justify-between text-sm mb-2">
                                         <p class=" font-medium">Eten Hunt</p>
@@ -227,7 +227,7 @@
                             </section>
 
                             <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo.png" alt="filter-icon" width="52">
+                                <img src="public/img/photo.png" alt="filter-icon" width="52">
                                 <div class="w-full ms-2">
                                     <div class="flex justify-between text-sm mb-2">
                                         <p class=" font-medium">Eten Hunt</p>
@@ -245,15 +245,15 @@
                     <div class="pt-4 pb-3">
                         <div class="message-header">
                             <div class="flex items-center px-4 rounded-xl">
-                                <button><img src="../../public/img/photo.png" alt="profile-image" width="40"></button>
+                                <button><img src="public/img/photo.png" alt="profile-image" width="40"></button>
                                 <div class="w-full ms-2">
                                     <p class=" font-medium text-sm">Eten Hunt</p>
                                     <span class="bg-green-500" style="display: inline-block; width: 8px; height: 8px; background-color: #33B843; border-radius: 50%; margin-right: 8px;"></span> <span class="text-xs">Online</span>
                                 </div>
                                 <div class="flex items-center pe-5">
-                                    <button><img src="../../public/img/video.png" alt="vedio icon" class="w-5 ml-6"></button>
-                                    <button><img src="../../public/img/call.png" alt="vedio icon" class="w-5 ml-6"></button>
-                                    <button><img src="../../public/img/element-3.png" alt="vedio icon" class="w-5 ml-6"></button>
+                                    <button><img src="public/img/video.png" alt="vedio icon" class="w-5 ml-6"></button>
+                                    <button><img src="public/img/call.png" alt="vedio icon" class="w-5 ml-6"></button>
+                                    <button><img src="public/img/element-3.png" alt="vedio icon" class="w-5 ml-6"></button>
                                 </div>
                             </div>
                         </div>
@@ -263,8 +263,8 @@
                         <div class="flex justify-between">
                             <div class="receiver mb-10">
                                 <div class="flex">
-                                    <img src="../../public/img/image-1.png" alt="image" width="100px">
-                                    <img src="../../public/img/image.png" class="block ml-4" alt="image" width="100px">
+                                    <img src="public/img/image-1.png" alt="image" width="100px">
+                                    <img src="public/img/image.png" class="block ml-4" alt="image" width="100px">
                                 </div>
                                 <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
                                 <span class="block text-gray-500 text-xs">Today 11:55</span>
@@ -291,8 +291,8 @@
                         <div class="mb-20">
                             <div class="receiver">
                                 <div class="flex">
-                                    <img src="../../public/img/image-2.png" alt="image" width="100px">
-                                    <img src="../../public/img/image-2.png" class="block ml-4" alt="image" width="100px">
+                                    <img src="public/img/image-2.png" alt="image" width="100px">
+                                    <img src="public/img/image-2.png" class="block ml-4" alt="image" width="100px">
                                 </div>
                                 <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
                                 <span class="block text-gray-500 text-xs">Today 11:55</span>
@@ -307,8 +307,8 @@
                         <div class="mb-20">
                             <div class="receiver">
                                 <div class="flex">
-                                    <img src="../../public/img/image-1.png" alt="image" width="100px">
-                                    <img src="../../public/img/image.png" class="block ml-4" alt="image" width="100px">
+                                    <img src="public/img/image-1.png" alt="image" width="100px">
+                                    <img src="public/img/image.png" class="block ml-4" alt="image" width="100px">
                                 </div>
                                 <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
                                 <span class="block text-gray-500 text-xs">Today 11:55</span>
@@ -323,8 +323,8 @@
                         <div class="mb-20">
                             <div class="receiver">
                                 <div class="flex">
-                                    <img src="../../public/img/image-2.png" alt="image" width="100px">
-                                    <img src="../../public/img/image-2.png" class="block ml-4" alt="image" width="100px">
+                                    <img src="public/img/image-2.png" alt="image" width="100px">
+                                    <img src="public/img/image-2.png" class="block ml-4" alt="image" width="100px">
                                 </div>
                                 <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
                                 <span class="block text-gray-500 text-xs">Today 11:55</span>
@@ -337,12 +337,12 @@
                         </div>
                     </div>
                     <footer class="fixed flex items-center bg-white w-svw mt-96 p-4">
-                        <button><img src="../../public/img/element-3.png" class=" max-w-5 max-h-5" alt="icon"></button>
+                        <button><img src="public/img/element-3.png" class=" max-w-5 max-h-5" alt="icon"></button>
                         <div class="flex items-center justify-between ms-4 p-1 ps-5 pe-2 rounded-2xl bg-gray-200" style="width: 620px;">
                             <button><input type="text" name="send-message" placeholder="type your message" class="bg-transparent text-xs outline-none"></button>
                             <div class="flex items-center">
-                                <button><img src="../../public/img/attach-circle.png" alt="attach-circle" class="w-5 h-5"></button>
-                                <button class="p-1 rounded-xl bg-slate-900 ml-3"><img src="../../public/img/send-2.png" alt="send" class="max-w-6 max-h-6"></button>
+                                <button><img src="public/img/attach-circle.png" alt="attach-circle" class="w-5 h-5"></button>
+                                <button class="p-1 rounded-xl bg-slate-900 ml-3"><img src="public/img/send-2.png" alt="send" class="max-w-6 max-h-6"></button>
                             </div>
                         </div>
                     </footer>

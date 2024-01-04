@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../public/css/tailwind.css" rel="stylesheet">
+    <link href="public/css/tailwind.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script> <!--   modif -->
     <!-- shart scrit -->
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -57,17 +57,17 @@
         <aside class="bg-gradient-to-br from-gray-800 to-gray-900 -translate-x-80 fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 lg:translate-x-0">
             <?php
 
-            include "../includes/vendeurSidebar.php";
+            include '../../view/includes/vendeurSidebar.php';
             ?>
             </ul>
     </div>
     </aside>
 
     <div class="bg-black fixed w-full z-50 flex flex-wrap items-center  justify-between ...  none uppercase transition-all disabled:shadow-none active:bg-orange-gray-500/30 lg:hidden">
-        <a class="ml-1" href="#"><img class="mx-5 my-1" src="../../public/img/IMMOCONNECT1.png" alt="dash"></a>
+        <a class="ml-1" href="#"><img class="mx-5 my-1" src="public/img/IMMOCONNECT1.png" alt="dash"></a>
         <button class=" mr-7 my-1 relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
-            <img class="navbar-burger" src="../../public/img/Group 1000003579.png" alt="dash">
-            <img class="hidden navbar-close" src="../../public/img/Group 1000003606.png" alt="dash">
+            <img class="navbar-burger" src="public/img/Group 1000003579.png" alt="dash">
+            <img class="hidden navbar-close" src="public/img/Group 1000003606.png" alt="dash">
             <!-- </span> -->
         </button>
     </div>
@@ -79,12 +79,12 @@
 
             <?php
 
-            include "../includes/vendeurSidebar.php";
+            include '../../view/includes/sidebar.php';
             ?>
             <li>
                 <a class="" href="#">
                     <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
-                        <img src="../../public/img/Bell (2).png" alt="image">
+                        <img src="public/img/Bell (2).png" alt="image">
                         <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">Notifications</p>
                     </button>
                 </a>
@@ -117,7 +117,7 @@
                     <div class="mr-auto md:mr-4 md:w-56">
                         <div class="relative w-full min-w-[200px] h-10">
                             <input class="peer w-full h-full bg-transparent text-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-orange-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-orange-gray-200 placeholder-shown:border-t-orange-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-orange-gray-200 focus:border-orange-500" placeholder=" ">
-                            <label class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal peer-placeholder-shown:text-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-orange-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-orange-gray-400 peer-focus:text-orange-500 before:border-orange-gray-200 peer-focus:before:border-orange-500 after:border-orange-gray-200 peer-focus:after:border-orange-500"> <img class="h-3 pr-2" height="5" src="../../public/img/MagnifyingGlass.png" alt="img"> Search</label>
+                            <label class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal peer-placeholder-shown:text-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-orange-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-orange-gray-400 peer-focus:text-orange-500 before:border-orange-gray-200 peer-focus:before:border-orange-500 after:border-orange-gray-200 peer-focus:after:border-orange-500"> <img class="h-3 pr-2" height="5" src="public/img/MagnifyingGlass.png" alt="img"> Search</label>
                         </div>
                     </div>
 
@@ -133,14 +133,14 @@
                             <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5 text-orange-gray-500">
                 <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd"></path>
               </svg>Sign In -->
-                            <img src="../../public/img/Bell (1).png" alt="nothification">
+                            <img src="public/img/Bell (1).png" alt="nothification">
                         </button>
                         <button class="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
                             <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
                                 <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5 text-orange-gray-500">
                   <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd"></path>
                 </svg> -->
-                                <img src="../../public/img/Bell (1).png" alt="nothification">
+                                <img src="public/img/Bell (1).png" alt="nothification">
                             </span>
                         </button>
                     </a>
@@ -149,7 +149,7 @@
             
             </span>
           </button> -->
-                    <!-- <img src="../../public/img/grommet-icons_google.png" alt=""> -->
+                    <!-- <img src="public/img/grommet-icons_google.png" alt=""> -->
                     <!-- <div class="dropdown relative inline-block float-right">
            <button class="dropbtn bg-green-600 text-white px-4 py-2 text-sm rounded hover:bg-green-700">Right</button>
               <div class="dropdown-content hidden absolute right-0 bg-gray-100 min-w-48 border border-gray-200 shadow-md mt-2">
@@ -160,7 +160,7 @@
             </div> -->
 
                     <div class="dropdown float-right relative inline-block ">
-                        <button class="dropbtn"><img src="../../public/img/Ellipse 300.png" alt=""></button>
+                        <button class="dropbtn"><img src="public/img/Ellipse 300.png" alt=""></button>
                         <div class="dropdown-content bg-gray-200 min-w-40 hidden absolute right-0 z-50 shadow-lg shadow-gray-500/50">
                             <a class="block text-black py-3 px-4 hover:bg-gray-300" href="#">Your Profile</a>
                             <a class="block text-black py-3 px-4 hover:bg-gray-300" href="#">Settings</a>
@@ -255,7 +255,7 @@
             <div class="bg-clip-border rounded-xl bg-blue-950 text-gray-50 shadow-md overflow-hidden w-full hidden md:block py-10 mb-6">
                 <div class="flex justify-evenly flex-row relative overflow-hidden">
                     <div class="w-1/3 min-w-20 flex justify-evenly flex-row">
-                        <img src="../../public/img/Ellipse 300.png" alt="">
+                        <img src="public/img/Ellipse 300.png" alt="">
                         <div>
                             <h3>Vako Shvili</h3>
                             <p class=" text-gray-400 font-poppins font-normal leading-6 break-words">vako.shvili@gmail.com</p>
@@ -271,7 +271,7 @@
                     </div>
                     <div class="ml-3 w-1/3 min-w-20 flex justify-evenly flex-row relative overflow-hidden">
                         <button class="bg-orange-600 text-white px-4 py-2 text-sm rounded hover:bg-orange-700">Edit Biography</button>
-                        <button><img src="../../public/img/Button.png" alt="button"></button>
+                        <button><img src="public/img/Button.png" alt="button"></button>
                     </div>
                 </div>
 
@@ -584,11 +584,11 @@
         </div>
     </div>
     </div>
-    <script type="text/javascript" src="../../public/js/lineShart2.js"></script>
+    <script type="text/javascript" src="public/js/lineShart2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script type="text/javascript" src="../../public/js/navbarScript.js"></script>
-    <script type="text/javascript" src="../../public/js/barShart.js"></script>
-    <script type="text/javascript" src="../../public/js/lineShart.js"></script>
+    <script type="text/javascript" src="public/js/navbarScript.js"></script>
+    <script type="text/javascript" src="public/js/barShart.js"></script>
+    <script type="text/javascript" src="public/js/lineShart.js"></script>
 </body>
 
 </html>

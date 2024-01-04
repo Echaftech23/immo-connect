@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 
 namespace App\models;
@@ -8,7 +6,7 @@ use App\Dao\DaoInterface;
 use App\entities\User;
 use App\database\Database, PDO, Exception;
 
-class UserModel implements DaoInterface 
+class UserModel implements DaoInterface
 {
     private $pdo;
 
@@ -16,16 +14,16 @@ class UserModel implements DaoInterface
     {
         $this->pdo = Database::getInstance()->getConnection();
     }
-    
+
 
     public function getAll()
     {
         $stmt = $this->pdo->prepare("SELECT * FROM users");
         $stmt->execute();
         $usersData = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if(empty($users)){
+        if (empty($users)) {
             return [];
-        }else{
+        } else {
             foreach ($usersData as $userData) {
                 $user = new User($userData->username, $userData->email, $userData->password, $userData->image, $userData->phone, $userData->rate, $userData->status, $userData->location_id, $userData->role_id);
             }
@@ -33,7 +31,21 @@ class UserModel implements DaoInterface
         $users[] = $user;
         return $users;
     }
-
+    public function getAllVendeurs()
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE role_id = 2 ");
+        $stmt->execute();
+        $usersData = $stmt->fetchAll(PDO::FETCH_OBJ);
+        if (!$usersData) {
+            return [];
+        } else {
+            foreach ($usersData as $userData) {
+                $user = new User($userData->username, $userData->email, $userData->password, $userData->image, $userData->phone, $userData->rate, $userData->status, $userData->location_id, $userData->role_id);
+                $users[] = $user;
+            }
+        }
+        return $users;
+    }
     public function save($user)
     {
         $stmt = $this->pdo->prepare("
@@ -50,10 +62,10 @@ class UserModel implements DaoInterface
         $status = $user->getStatus();
         $location_id = $user->getLocationId();
         $role_id = $user->getRoleId();
-        
+
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password',$password);
+        $stmt->bindParam(':password', $password);
         $stmt->bindParam(':image', $image);
         $stmt->bindParam(':phone', $phone);
         $stmt->bindParam(':rate', $rate);
@@ -123,4 +135,3 @@ class UserModel implements DaoInterface
         return $stmt->execute() ? $user : false;
     }
 }
->>>>>>> 3830c1918e92d39d2d8b155c0ad951c56e9ca097

@@ -12,7 +12,7 @@ class User extends GenericEntity {
     private $rate = NULL;
     private $status = 'Online';
     private $location_id = NULL;
-    private $role_id = '1';
+    private $role_id ;
 
     public function __construct($username, $email, $password, $image, $phone, $rate, $status, $location_id, $role_id)
     {

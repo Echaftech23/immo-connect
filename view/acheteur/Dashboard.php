@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../public/css/tailwind.css" rel="stylesheet">
+    <link href="public/css/tailwind.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script> <!--   modif -->
 
     <style>
@@ -25,42 +25,42 @@
         <aside class="bg-gradient-to-br from-gray-800 to-gray-900 -translate-x-80 fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 lg:translate-x-0">
             <?php
 
-            include "../includes/sidebar.php";
+            include '../../view/includes/sidebar.php';
             ?>
             </ul>
-          </div>
-        </aside>
+    </div>
+    </aside>
 
-        <div class="bg-black fixed w-full z-50 flex flex-wrap items-center  justify-between ...  none uppercase transition-all disabled:shadow-none active:bg-orange-gray-500/30 lg:hidden">
-            <a class="ml-1" href="#"><img class="mx-5 my-1" src="../../public/img/IMMOCONNECT1.png" alt="dash"></a>
-            <button class=" mr-7 my-1 relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
-                <img class="navbar-burger" src="../../public/img/Group 1000003579.png" alt="dash">
-                <img class="hidden navbar-close" src="../../public/img/Group 1000003606.png" alt="dash">
-                <!-- </span> -->
-            </button>
-        </div>
-        <div class="navbar-menu relative  z-50 right-0 hidden">
-            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <div class="bg-black fixed w-full z-50 flex flex-wrap items-center  justify-between ...  none uppercase transition-all disabled:shadow-none active:bg-orange-gray-500/30 lg:hidden">
+        <a class="ml-1" href="#"><img class="mx-5 my-1" src="public/img/IMMOCONNECT1.png" alt="dash"></a>
+        <button class=" mr-7 my-1 relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
+            <img class="navbar-burger" src="public/img/Group 1000003579.png" alt="dash">
+            <img class="hidden navbar-close" src="public/img/Group 1000003606.png" alt="dash">
+            <!-- </span> -->
+        </button>
+    </div>
+    <div class="navbar-menu relative  z-50 right-0 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
 
-            <aside class="bg-gradient-to-br from-gray-800 to-gray-900 absolute w-full max-w-80  right-0">
+        <aside class="bg-gradient-to-br from-gray-800 to-gray-900 absolute w-full max-w-80  right-0">
 
 
-                <?php
+            <?php
 
-                include "../includes/sidebar.php";
-                ?>
-                <li>
-                    <a class="" href="#">
-                        <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
-                            <img src="../../public/img/Bell (2).png" alt="image">
-                            <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">Notifications</p>
-                        </button>
-                    </a>
-                </li>
+            include '../../view/includes/sidebar.php';
+            ?>
+            <li>
+                <a class="" href="#">
+                    <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">
+                        <img src="public/img/Bell (2).png" alt="image">
+                        <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">Notifications</p>
+                    </button>
+                </a>
+            </li>
 
-                </ul>
-        </div>
-        </aside>
+            </ul>
+    </div>
+    </aside>
     </div>
 
 
@@ -85,29 +85,29 @@
                     <div class="mr-auto md:mr-4 md:w-56">
                         <div class="relative w-full min-w-[200px] h-10">
                             <input class="peer w-full h-full bg-transparent text-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-orange-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-orange-gray-200 placeholder-shown:border-t-orange-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-orange-gray-200 focus:border-orange-500" placeholder=" ">
-                            <label class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal peer-placeholder-shown:text-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-orange-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-orange-gray-400 peer-focus:text-orange-500 before:border-orange-gray-200 peer-focus:before:border-orange-500 after:border-orange-gray-200 peer-focus:after:border-orange-500"> <img class="h-3 pr-2" height="5" src="../../public/img/MagnifyingGlass.png" alt="img"> Search</label>
+                            <label class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal peer-placeholder-shown:text-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-orange-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-orange-gray-400 peer-focus:text-orange-500 before:border-orange-gray-200 peer-focus:before:border-orange-500 after:border-orange-gray-200 peer-focus:after:border-orange-500"> <img class="h-3 pr-2" height="5" src="public/img/MagnifyingGlass.png" alt="img"> Search</label>
                         </div>
                     </div>
 
-                    
+
                     <a href="#">
                         <button class="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 hidden items-center gap-1 px-4 lg:flex" type="button">
-                            
-                            <img src="../../public/img/Bell (1).png" alt="nothification">
+
+                            <img src="public/img/Bell (1).png" alt="nothification">
                         </button>
                         <button class="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-500 hover:bg-orange-gray-500/10 active:bg-orange-gray-500/30 grid lg:hidden" type="button">
                             <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                                
-                                <img src="../../public/img/Bell (1).png" alt="nothification">
+
+                                <img src="public/img/Bell (1).png" alt="nothification">
                             </span>
                         </button>
                     </a>
-                    
+
 
                     <div class="dropdown float-right relative inline-block ">
-                        <button class="dropbtn"><img src="../../public/img/Ellipse 300.png" alt=""></button>
+                        <button class="dropbtn"><img src="public/img/Ellipse 300.png" alt=""></button>
                         <div class="dropdown-content bg-gray-200 min-w-40 hidden absolute right-0 z-50 shadow-lg shadow-gray-500/50">
-                            <a class="block text-black py-3 px-4 hover:bg-gray-300" href="#">Your Profile</a>
+                            <a class="block text-black py-3 px-4 hover:bg-gray-300" href="profile">Your Profile</a>
                             <a class="block text-black py-3 px-4 hover:bg-gray-300" href="#">Settings</a>
                             <a class="block text-black py-3 px-4 hover:bg-gray-300" href="#">Sign out</a>
                         </div>
@@ -200,7 +200,7 @@
             <div class="bg-clip-border rounded-xl bg-blue-950 text-gray-50 shadow-md overflow-hidden w-full hidden md:block py-10 mb-6">
                 <div class="flex justify-evenly flex-row relative overflow-hidden">
                     <div class="w-1/3 min-w-20 flex justify-evenly flex-row">
-                        <img src="../../public/img/Ellipse 300.png" alt="">
+                        <img src="public/img/Ellipse 300.png" alt="">
                         <div>
                             <h3>Vako Shvili</h3>
                             <p class=" text-gray-400 font-poppins font-normal leading-6 break-words">vako.shvili@gmail.com</p>
@@ -216,7 +216,7 @@
                     </div>
                     <div class="ml-3 w-1/3 min-w-20 flex justify-evenly flex-row relative overflow-hidden">
                         <button class="bg-orange-600 text-white px-4 py-2 text-sm rounded hover:bg-orange-700">Edit Biography</button>
-                        <button><img src="../../public/img/Button.png" alt="button"></button>
+                        <button><img src="public/img/Button.png" alt="button"></button>
                     </div>
                 </div>
 
@@ -253,15 +253,21 @@
                 </div>
 
                 <div class="overflow-hidden w-full py-10 mb-6 flex flex-wrap  relative">
+                    <?php
+                    $vendeurs = $userOPJ->getAllVendeurs() ;
+                    //while ( $vendeurs) {
+                        foreach ($vendeurs as $vendeur) {
+                    ?>
                     <div class="p-3">
 
                         <div class="w-72 h-56 relative bg-white rounded-lg border border-black border-opacity-10">
                             <!-- <img class="w-8 h-8 left-[20px] top-[22px] absolute rounded-full" src="https://via.placeholder.com/34x34" /> -->
-                            <a href="#"><img class="w-8 h-8 left-[20px] top-[22px] absolute rounded-full" src="../../public/img/Ellipse 21.png" /></a>
-                            <div class="left-[64px] top-[28px] absolute text-black text-xs font-semibold font-['Inter'] flex justify-evenly flex-row">Nina Elle (Nina ells) <img src="../../public/img/🦆 icon _twitter verified badge_.png" alt="icone"></div>
+                            <a href="#"><img class="w-8 h-8 left-[20px] top-[22px] absolute rounded-full" src=" <?php if($vendeur->getImage()!='') echo $vendeur->getImage(); else echo 'https://via.placeholder.com/34x34';  ?>" alt="icone"></a>
+                            
+                            <div class="left-[64px] top-[28px] absolute text-black text-xs font-semibold font-['Inter'] flex justify-evenly flex-row"> <?php echo $vendeur->getUsername();?> <img src="public/img/🦆 icon _twitter verified badge_.png" alt="icone"> </div>
                             <div class="w-4 h-3.5 left-[191px] top-[29px] absolute">
                             </div>
-                            <div class="left-[63px] top-[48px] absolute text-slate-500 text-xs font-bold font-['Inter'] flex flex-row"><img src="../../public/img/Star 1.png" alt="icone">4.3 (15 Reviews)</div>
+                            <div class="left-[63px] top-[48px] absolute text-slate-500 text-xs font-bold font-['Inter'] flex flex-row"><img src="public/img/Star 1.png" alt="icone">4.3 (15 Reviews)</div>
                             <div class="w-60 h-12 left-[21px] top-[81px] absolute bg-white rounded border border-black border-opacity-20"></div>
                             <div class="left-[165px] top-[87px] absolute text-black text-xs font-medium font-['Inter']">14</div>
                             <div class="left-[35px] top-[89px] absolute text-black text-xs font-medium font-['Inter']">Los Angels, CA</div>
@@ -271,12 +277,73 @@
                             <div class="w-28 h-6 left-[23px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
                             <div class="w-28 h-6 left-[147px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
                             <a href="#">
-                                <div class="left-[160px] top-[148px] absolute text-teal-600 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="../../public/img/Group 1.png" alt="img"> view profile</div>
+                                <div class="left-[160px] top-[148px] absolute text-teal-600 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="public/img/Group 1.png" alt="img"> view profile</div>
                             </a>
                             <a href="#">
-                                <div class="left-[34px] top-[148px] absolute text-slate-500 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="../../public/img/Group 3 (1).png" alt="img">send message</div>
+                                <div class="left-[34px] top-[148px] absolute text-slate-500 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="public/img/Group 3 (1).png" alt="img">send message</div>
                             </a>
 
+                            <div class="w-5 h-3.5 left-[30px] top-[148px] absolute">
+                            </div>
+                            <div class="left-[87px] top-[193px] absolute text-red-400 text-xs font-medium font-['Inter']">May not be available</div>
+                        </div>
+                    </div>
+                    <?php
+                    }
+                    ?>
+
+                     <!-- <div class="p-3">
+
+                        <div class="w-72 h-56 relative bg-white rounded-lg border border-black border-opacity-10">
+
+                            <a href="#"><img class="w-8 h-8 left-[20px] top-[22px] absolute rounded-full" src="https://via.placeholder.com/34x34" /></a>
+                            <div class="left-[64px] top-[28px] absolute text-black text-xs font-semibold font-['Inter'] flex justify-evenly flex-row">Newton Scamendar <img src="public/img/🦆 icon _twitter verified badge_.png" alt="icone"></div>
+                            <div class="w-4 h-3.5 left-[191px] top-[29px] absolute">
+                            </div>
+                            <div class="left-[63px] top-[48px] absolute text-slate-500 text-xs font-bold font-['Inter'] flex flex-row"><img src="public/img/Star 1.png" alt="icone">4.3 (15 Reviews)</div>
+                            <div class="w-60 h-12 left-[21px] top-[81px] absolute bg-white rounded border border-black border-opacity-20"></div>
+                            <div class="left-[165px] top-[87px] absolute text-black text-xs font-medium font-['Inter']">14</div>
+                            <div class="left-[35px] top-[89px] absolute text-black text-xs font-medium font-['Inter']">Los Angels, CA</div>
+                            <div class="left-[35px] top-[107px] absolute text-slate-500 text-xs font-medium font-['Inter']">1221 MILES AWAY</div>
+                            <div class="left-[165px] top-[107px] absolute text-slate-500 text-xs font-medium font-['Inter']">AVERAGE Ads</div>
+                            <div class="w-7 h-px left-[144px] top-[89px] absolute origin-top-left rotate-90 border border-black border-opacity-20"></div>
+                            <div class="w-28 h-6 left-[23px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
+                            <div class="w-28 h-6 left-[147px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
+                            <a href="#">
+                                <div class="left-[160px] top-[148px] absolute text-teal-600 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="public/img/Group 1.png" alt="img"> view profile</div>
+                            </a>
+                            <a href="#">
+                                <div class="left-[34px] top-[148px] absolute text-slate-500 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="public/img/Group 3 (1).png" alt="img">send message</div>
+                            </a>
+                            <div class="w-5 h-3.5 left-[30px] top-[148px] absolute">
+                            </div>
+                            <div class="left-[87px] top-[193px] absolute text-red-400 text-xs font-medium font-['Inter']">May not be available</div>
+                        </div>
+                    </div> -->
+<!--
+                    <div class="p-3">
+
+                        <div class="w-72 h-56 relative bg-white rounded-lg border border-black border-opacity-10">
+                            <a href="#"><img class="w-8 h-8 left-[20px] top-[22px] absolute rounded-full" src="https://via.placeholder.com/34x34" /></a>
+
+                            <div class="left-[64px] top-[28px] absolute text-black text-xs font-semibold font-['Inter'] flex justify-evenly flex-row">Nina Elle <img src="public/img/🦆 icon _twitter verified badge_.png" alt="icone"></div>
+                            <div class="w-4 h-3.5 left-[191px] top-[29px] absolute">
+                            </div>
+                            <div class="left-[63px] top-[48px] absolute text-slate-500 text-xs font-bold font-['Inter'] flex flex-row"><img src="public/img/Star 1.png" alt="icone">4.3 (15 Reviews)</div>
+                            <div class="w-60 h-12 left-[21px] top-[81px] absolute bg-white rounded border border-black border-opacity-20"></div>
+                            <div class="left-[165px] top-[87px] absolute text-black text-xs font-medium font-['Inter']">14</div>
+                            <div class="left-[35px] top-[89px] absolute text-black text-xs font-medium font-['Inter']">Los Angels, CA</div>
+                            <div class="left-[35px] top-[107px] absolute text-slate-500 text-xs font-medium font-['Inter']">1221 MILES AWAY</div>
+                            <div class="left-[165px] top-[107px] absolute text-slate-500 text-xs font-medium font-['Inter']">AVERAGE Ads</div>
+                            <div class="w-7 h-px left-[144px] top-[89px] absolute origin-top-left rotate-90 border border-black border-opacity-20"></div>
+                            <div class="w-28 h-6 left-[23px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
+                            <div class="w-28 h-6 left-[147px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
+                            <a href="#">
+                                <div class="left-[160px] top-[148px] absolute text-teal-600 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="public/img/Group 1.png" alt="img"> view profile</div>
+                            </a>
+                            <a href="#">
+                                <div class="left-[34px] top-[148px] absolute text-slate-500 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="public/img/Group 3 (1).png" alt="img">send message</div>
+                            </a>
                             <div class="w-5 h-3.5 left-[30px] top-[148px] absolute">
                             </div>
                             <div class="left-[87px] top-[193px] absolute text-red-400 text-xs font-medium font-['Inter']">May not be available</div>
@@ -286,12 +353,11 @@
                     <div class="p-3">
 
                         <div class="w-72 h-56 relative bg-white rounded-lg border border-black border-opacity-10">
-
                             <a href="#"><img class="w-8 h-8 left-[20px] top-[22px] absolute rounded-full" src="https://via.placeholder.com/34x34" /></a>
-                            <div class="left-[64px] top-[28px] absolute text-black text-xs font-semibold font-['Inter'] flex justify-evenly flex-row">Newton Scamendar <img src="../../public/img/🦆 icon _twitter verified badge_.png" alt="icone"></div>
+                            <div class="left-[64px] top-[28px] absolute text-black text-xs font-semibold font-['Inter'] flex justify-evenly flex-row">Nina Elle (Nina ells) <img src="public/img/🦆 icon _twitter verified badge_.png" alt="icone"></div>
                             <div class="w-4 h-3.5 left-[191px] top-[29px] absolute">
                             </div>
-                            <div class="left-[63px] top-[48px] absolute text-slate-500 text-xs font-bold font-['Inter'] flex flex-row"><img src="../../public/img/Star 1.png" alt="icone">4.3 (15 Reviews)</div>
+                            <div class="left-[63px] top-[48px] absolute text-slate-500 text-xs font-bold font-['Inter'] flex flex-row"><img src="public/img/Star 1.png" alt="icone">4.3 (15 Reviews)</div>
                             <div class="w-60 h-12 left-[21px] top-[81px] absolute bg-white rounded border border-black border-opacity-20"></div>
                             <div class="left-[165px] top-[87px] absolute text-black text-xs font-medium font-['Inter']">14</div>
                             <div class="left-[35px] top-[89px] absolute text-black text-xs font-medium font-['Inter']">Los Angels, CA</div>
@@ -301,67 +367,10 @@
                             <div class="w-28 h-6 left-[23px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
                             <div class="w-28 h-6 left-[147px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
                             <a href="#">
-                                <div class="left-[160px] top-[148px] absolute text-teal-600 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="../../public/img/Group 1.png" alt="img"> view profile</div>
+                                <div class="left-[160px] top-[148px] absolute text-teal-600 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="public/img/Group 1.png" alt="img"> view profile</div>
                             </a>
                             <a href="#">
-                                <div class="left-[34px] top-[148px] absolute text-slate-500 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="../../public/img/Group 3 (1).png" alt="img">send message</div>
-                            </a>
-                            <div class="w-5 h-3.5 left-[30px] top-[148px] absolute">
-                            </div>
-                            <div class="left-[87px] top-[193px] absolute text-red-400 text-xs font-medium font-['Inter']">May not be available</div>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-
-                        <div class="w-72 h-56 relative bg-white rounded-lg border border-black border-opacity-10">
-                            <a href="#"><img class="w-8 h-8 left-[20px] top-[22px] absolute rounded-full" src="https://via.placeholder.com/34x34" /></a>
-
-                            <div class="left-[64px] top-[28px] absolute text-black text-xs font-semibold font-['Inter'] flex justify-evenly flex-row">Nina Elle <img src="../../public/img/🦆 icon _twitter verified badge_.png" alt="icone"></div>
-                            <div class="w-4 h-3.5 left-[191px] top-[29px] absolute">
-                            </div>
-                            <div class="left-[63px] top-[48px] absolute text-slate-500 text-xs font-bold font-['Inter'] flex flex-row"><img src="../../public/img/Star 1.png" alt="icone">4.3 (15 Reviews)</div>
-                            <div class="w-60 h-12 left-[21px] top-[81px] absolute bg-white rounded border border-black border-opacity-20"></div>
-                            <div class="left-[165px] top-[87px] absolute text-black text-xs font-medium font-['Inter']">14</div>
-                            <div class="left-[35px] top-[89px] absolute text-black text-xs font-medium font-['Inter']">Los Angels, CA</div>
-                            <div class="left-[35px] top-[107px] absolute text-slate-500 text-xs font-medium font-['Inter']">1221 MILES AWAY</div>
-                            <div class="left-[165px] top-[107px] absolute text-slate-500 text-xs font-medium font-['Inter']">AVERAGE Ads</div>
-                            <div class="w-7 h-px left-[144px] top-[89px] absolute origin-top-left rotate-90 border border-black border-opacity-20"></div>
-                            <div class="w-28 h-6 left-[23px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
-                            <div class="w-28 h-6 left-[147px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
-                            <a href="#">
-                                <div class="left-[160px] top-[148px] absolute text-teal-600 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="../../public/img/Group 1.png" alt="img"> view profile</div>
-                            </a>
-                            <a href="#">
-                                <div class="left-[34px] top-[148px] absolute text-slate-500 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="../../public/img/Group 3 (1).png" alt="img">send message</div>
-                            </a>
-                            <div class="w-5 h-3.5 left-[30px] top-[148px] absolute">
-                            </div>
-                            <div class="left-[87px] top-[193px] absolute text-red-400 text-xs font-medium font-['Inter']">May not be available</div>
-                        </div>
-                    </div>
-
-                    <div class="p-3">
-
-                        <div class="w-72 h-56 relative bg-white rounded-lg border border-black border-opacity-10">
-                            <a href="#"><img class="w-8 h-8 left-[20px] top-[22px] absolute rounded-full" src="https://via.placeholder.com/34x34" /></a>
-                            <div class="left-[64px] top-[28px] absolute text-black text-xs font-semibold font-['Inter'] flex justify-evenly flex-row">Nina Elle (Nina ells) <img src="../../public/img/🦆 icon _twitter verified badge_.png" alt="icone"></div>
-                            <div class="w-4 h-3.5 left-[191px] top-[29px] absolute">
-                            </div>
-                            <div class="left-[63px] top-[48px] absolute text-slate-500 text-xs font-bold font-['Inter'] flex flex-row"><img src="../../public/img/Star 1.png" alt="icone">4.3 (15 Reviews)</div>
-                            <div class="w-60 h-12 left-[21px] top-[81px] absolute bg-white rounded border border-black border-opacity-20"></div>
-                            <div class="left-[165px] top-[87px] absolute text-black text-xs font-medium font-['Inter']">14</div>
-                            <div class="left-[35px] top-[89px] absolute text-black text-xs font-medium font-['Inter']">Los Angels, CA</div>
-                            <div class="left-[35px] top-[107px] absolute text-slate-500 text-xs font-medium font-['Inter']">1221 MILES AWAY</div>
-                            <div class="left-[165px] top-[107px] absolute text-slate-500 text-xs font-medium font-['Inter']">AVERAGE Ads</div>
-                            <div class="w-7 h-px left-[144px] top-[89px] absolute origin-top-left rotate-90 border border-black border-opacity-20"></div>
-                            <div class="w-28 h-6 left-[23px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
-                            <div class="w-28 h-6 left-[147px] top-[143px] absolute bg-white rounded border border-black border-opacity-10"></div>
-                            <a href="#">
-                                <div class="left-[160px] top-[148px] absolute text-teal-600 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="../../public/img/Group 1.png" alt="img"> view profile</div>
-                            </a>
-                            <a href="#">
-                                <div class="left-[34px] top-[148px] absolute text-slate-500 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="../../public/img/Group 3 (1).png" alt="img">send message</div>
+                                <div class="left-[34px] top-[148px] absolute text-slate-500 text-xs font-semibold font-['Inter'] flex flex-row"><img class="mr-2" src="public/img/Group 3 (1).png" alt="img">send message</div>
                             </a>
                             <div class="w-5 h-3.5 left-[30px] top-[148px] absolute">
                             </div>
@@ -370,13 +379,13 @@
                                 <p class="text-green-400 ">Available</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                 </div>
 
             </div>
-           
+
         </div>
         <div class="text-orange-gray-600">
             <footer class="py-2">
@@ -405,7 +414,7 @@
     </div>
     </div>
 
-    <script type="text/javascript" src="../../public/js/navbarScript.js"></script>
+    <script type="text/javascript" src="public/js/navbarScript.js"></script>
 </body>
 
 </html>

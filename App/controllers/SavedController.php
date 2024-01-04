@@ -1,17 +1,20 @@
 <?php
 namespace App\controllers;
-
 require __DIR__ . '/../../vendor/autoload.php';
 
 use App\entities\Immobilier;
 use App\models\ImmobilierModel;
 
-class HomeController{
-    public function index(){
+class SavedController{
+
+
+    public function saved(){
 
         
-        include '../../view/index.php'; 
+        include '../../view/acheteur/saved.php'; 
     }
+
+    
 }
 
 

@@ -1,16 +1,15 @@
 <?php
 namespace App\controllers;
-
 require __DIR__ . '/../../vendor/autoload.php';
 
 use App\entities\Immobilier;
 use App\models\ImmobilierModel;
 
-class HomeController{
-    public function index(){
+class ProfileController{
+    public function Profile(){
 
         
-        include '../../view/index.php'; 
+        include '../../view/profile/profile.php'; 
     }
 }
 

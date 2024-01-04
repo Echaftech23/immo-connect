@@ -16,7 +16,11 @@ $router->setRoutes([
         'annoucement/make-transaction' => ['TransactionController', 'index'],
         'signup' => ['UserController', 'signup'],
         'signin' => ['UserController', 'login'],
-
+        'chat' => ['ChatController', 'chat'],
+        'acheteur' => ['AcheteurController', 'acheteur'],
+        'vendeur' => ['VendeurController', 'vendeur'],
+        'profile' => ['ProfileController', 'profile'],
+        'saved' => ['ProfileController', 'saved'],
     ],
     'POST' => [
         'annoucement/comment/add' => ['CommentaireController', 'save'],
