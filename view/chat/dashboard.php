@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../public/css/tailwind.css" rel="stylesheet">
+    <link href="public/css/tailwind.css" rel="stylesheet">
     <!-- Font Awesome Free CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -171,71 +171,22 @@
                         <!-- Message section -->
                         <div class="side-container" style="height: calc(140vh - 400px);">
 
-                            <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo.png" alt="filter-icon" width="52">
-                                <div class="w-full ms-2">
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <p class=" font-medium">Eten Hunt</p>
-                                        <p>Agents</p>
+                            <?php foreach ($messages as $message) { ?>
+                                <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
+                                    <img src="../../public/img/photo.png" alt="filter-icon" width="52">
+                                    <div class="w-full ms-2">
+                                        <div class="flex justify-between text-sm mb-2">
+                                            <p class=" font-medium"><?= $message->getReceiverId() ?></p>
+                                            <p>Agents</p>
+                                        </div>
+                                        <p class="text-xs">Thank you very much. I'm glad...</p>
                                     </div>
-                                    <p class="text-xs">Thank you very much. I'm glad...</p>
-                                </div>
-                            </section>
+                                </section>
+                            <?php } ?>
 
-                            <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo-1.png" alt="filter-icon" width="52">
-                                <div class="w-full ms-2">
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <p class=" font-medium">Eten Hunt</p>
-                                        <p>Agents</p>
-                                    </div>
-                                    <p class="text-xs">You : Sure! let me tell you about w…</p>
-                                </div>
-                            </section>
 
-                            <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo-2.png" alt="filter-icon" width="52">
-                                <div class="w-full ms-2">
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <p class=" font-medium">Eten Hunt</p>
-                                        <p>Agents</p>
-                                    </div>
-                                    <p class="text-xs">Thank you very much. I'm glad...</p>
-                                </div>
-                            </section>
 
-                            <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo-3.png" alt="filter-icon" width="52">
-                                <div class="w-full ms-2">
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <p class=" font-medium">Eten Hunt</p>
-                                        <p>Agents</p>
-                                    </div>
-                                    <p class="text-xs">You : Sure! let me tell you about w…</p>
-                                </div>
-                            </section>
 
-                            <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo-1.png" alt="filter-icon" width="52">
-                                <div class="w-full ms-2">
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <p class=" font-medium">Eten Hunt</p>
-                                        <p>Agents</p>
-                                    </div>
-                                    <p class="text-xs">Thank you very much. I'm glad...</p>
-                                </div>
-                            </section>
-
-                            <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
-                                <img src="../../public/img/photo.png" alt="filter-icon" width="52">
-                                <div class="w-full ms-2">
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <p class=" font-medium">Eten Hunt</p>
-                                        <p>Agents</p>
-                                    </div>
-                                    <p class="text-xs">Thank you very much. I'm glad...</p>
-                                </div>
-                            </section>
                         </div>
                     </div>
                 </div>
@@ -260,95 +211,102 @@
                     </div>
 
                     <div class="bg-blue-100 pl-4 pe-7 side-container fixed overflow-hidden" style="width: calc(100% - 560px); height: 390px;">
-                        <div class="flex justify-between">
-                            <div class="receiver mb-10">
-                                <div class="flex">
-                                    <img src="../../public/img/image-1.png" alt="image" width="100px">
-                                    <img src="../../public/img/image.png" class="block ml-4" alt="image" width="100px">
-                                </div>
-                                <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
-                                <span class="block text-gray-500 text-xs">Today 11:55</span>
-                            </div>
-
-                            <div class="sender">
-                                <p class="mb-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
-                                <span class="block text-gray-500 text-xs float-right">Today 11:56</span>
-                            </div>
-                        </div>
-
-                        <div class="mb-20">
-                            <div class="receiver">
-                                <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
-                                <span class="block text-gray-500 text-xs">Today 11:55</span>
-                            </div>
-
-                            <div class="sender float-right">
-                                <p class="my-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
-                                <span class="block text-gray-500 text-xs float-right">Today 11:56</span>
-                            </div>
-                        </div>
-
-                        <div class="mb-20">
-                            <div class="receiver">
-                                <div class="flex">
-                                    <img src="../../public/img/image-2.png" alt="image" width="100px">
-                                    <img src="../../public/img/image-2.png" class="block ml-4" alt="image" width="100px">
-                                </div>
-                                <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
-                                <span class="block text-gray-500 text-xs">Today 11:55</span>
-                            </div>
-
-                            <div class="sender float-right">
-                                <p class="my-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
-                                <span class="block text-gray-500 text-xs float-right">Today 11:56</span>
-                            </div>
-                        </div>
-
-                        <div class="mb-20">
-                            <div class="receiver">
-                                <div class="flex">
-                                    <img src="../../public/img/image-1.png" alt="image" width="100px">
-                                    <img src="../../public/img/image.png" class="block ml-4" alt="image" width="100px">
-                                </div>
-                                <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
-                                <span class="block text-gray-500 text-xs">Today 11:55</span>
-                            </div>
-
-                            <div class="sender float-right">
-                                <p class="mb-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
-                                <span class="block text-gray-500 text-xs float-right">Today 11ssd:56</span>
-                            </div>
-                        </div>
-
-                        <div class="mb-20">
-                            <div class="receiver">
-                                <div class="flex">
-                                    <img src="../../public/img/image-2.png" alt="image" width="100px">
-                                    <img src="../../public/img/image-2.png" class="block ml-4" alt="image" width="100px">
-                                </div>
-                                <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
-                                <span class="block text-gray-500 text-xs">Today 11:55</span>
-                            </div>
-
-                            <div class="sender float-right">
-                                <p class="mb-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
-                                <span class="block text-gray-500 text-xs float-right">Today 11:56</span>
-                            </div>
+                        <div id="message-container" class="flex flex-col space-y-4">
+                            <?php foreach ($messages as $message) { ?>
+                                <?php if ($message->getSenderId() == 3) { ?>
+                                    <!-- Message from the logged-in user (user with ID 3) -->
+                                    <div class="self-end mb-4">
+                                        <div class="bg-blue-950 text-white rounded-l-2xl rounded-b-xl py-2 px-3 text-sm max-w-md">
+                                            <p><?= $message->getContent() ?></p>
+                                            <span class="block text-gray-500 text-xs float-right"><?= $message->getDatePublication() ?></span>
+                                        </div>
+                                    </div>
+                                <?php } else { ?>
+                                    <!-- Message from the other user (user with ID 2) -->
+                                    <div class="self-start mb-4">
+                                        <div class="bg-slate-950 text-white rounded-r-2xl rounded-b-xl py-2 px-3 text-sm max-w-md">
+                                            <p><?= $message->getContent() ?></p>
+                                            <span class="block text-gray-500 text-xs"><?= $message->getDatePublication() ?></span>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            <?php } ?>
                         </div>
                     </div>
+
+
+
                     <footer class="fixed flex items-center bg-white w-svw mt-96 p-4">
-                        <button><img src="../../public/img/element-3.png" class=" max-w-5 max-h-5" alt="icon"></button>
                         <div class="flex items-center justify-between ms-4 p-1 ps-5 pe-2 rounded-2xl bg-gray-200" style="width: 620px;">
-                            <button><input type="text" name="send-message" placeholder="type your message" class="bg-transparent text-xs outline-none"></button>
-                            <div class="flex items-center">
-                                <button><img src="../../public/img/attach-circle.png" alt="attach-circle" class="w-5 h-5"></button>
-                                <button class="p-1 rounded-xl bg-slate-900 ml-3"><img src="../../public/img/send-2.png" alt="send" class="max-w-6 max-h-6"></button>
-                            </div>
+                            <form method="Post" action="send-message" class="flex items-center">
+                                <input type="hidden" name="sender_id" value="3"> <!-- User 3 ID -->
+                                <input type="hidden" name="receiver_id" value="2"> <!-- User 2 ID -->
+
+                                <input type="text" name="message_content" placeholder="Type your message" class="bg-transparent text-xs outline-none">
+
+
+                                <button type="submit" class="p-1 rounded-xl bg-slate-900 ml-3">
+                                    send
+                                </button>
                         </div>
-                    </footer>
-                </main>
+                        </form>
             </div>
+
+            </footer>
+            <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
+    <img src="../../public/img/photo.png" alt="filter-icon" width="52">
+    <div class="w-full ms-2">
+        <div class="flex justify-between text-sm mb-2">
+            <p class=" font-medium"><?= $message->getReceiverId() ?></p>
+            <p>Agents</p>
+        </div>
+        <p class="text-xs"><?= $message->getContent() ?></p>
+    </div>
+</section>
+            </main>
         </div>
     </div>
+    </div>
+  <script>
+    function sendMessage() {
+    var formData = {
+        sender_id: document.querySelector('input[name="sender_id"]').value,
+        receiver_id: document.querySelector('input[name="receiver_id"]').value,
+        message_content: document.querySelector('input[name="message_content"]').value
+    };
+
+    fetch('send-message', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Create a new div element
+            var newMessageContainer = document.createElement('div');
+            newMessageContainer.innerHTML = data;
+
+            // Append the new div element to the message container
+            document.querySelector('#message-container').appendChild(newMessageContainer);
+
+            // Clear the input field
+            document.querySelector('input[name="message_content"]').value = '';
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}
+
+// Submit the form using AJAX when the form is submitted
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    sendMessage();
+});
+
+  </script>
+
+
 
 </body>

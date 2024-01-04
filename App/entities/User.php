@@ -14,8 +14,9 @@ class User extends GenericEntity {
     private $location_id = NULL;
     private $role_id = '1';
 
-    public function __construct($username, $email, $password, $image, $phone, $rate, $status, $location_id, $role_id)
+    public function __construct($id,$username, $email, $password, $image, $phone, $rate, $status, $location_id, $role_id)
     {
+        $this->id = $id;
         $this->username = $username;
         $this->email = $email;
         $this->password = $password;
@@ -27,6 +28,16 @@ class User extends GenericEntity {
         $this->role_id = $role_id;
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    
     public function getUsername()
     {
         return $this->username;

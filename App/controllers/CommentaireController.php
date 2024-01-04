@@ -9,6 +9,10 @@ require __DIR__ . '/../../vendor/autoload.php';
 class CommentaireController{
 
     public function save(){
+        if ($_SESSION["isAdmin"]) {
+        } else {
+            header("location:signin");
+        }
         $id = null;
         $content = isset($_POST['opinion']) ? htmlspecialchars($_POST['opinion']) : '';
         $image = isset($_POST['file']) ? htmlspecialchars($_POST['file']) : '';

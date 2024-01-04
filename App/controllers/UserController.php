@@ -11,16 +11,37 @@ class UserController
 {
     public function redirectToSignup()
     {
+        if (isset($_SESSION["userId"])) {
+            $userSId=$_SESSION["userId"];
+                $user= new UserModel();
+                $userData= $user->getUserById($userSId);
+            }
+            else {
+               $userData=null ;
+            }
+    
         include '../../view/auth/signup.php';
     }
     public function redirectToSignin()
     {
+        if (isset($_SESSION["userId"])) {
+            $userSId=$_SESSION["userId"];
+                $user= new UserModel();
+                $userData= $user->getUserById($userSId);
+            }
+            else {
+               $userData=null ;
+            }
+    
         include '../../view/auth/signin.php';
     }
 
 
     public function signup()
     {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -35,7 +56,7 @@ class UserController
             $error = 'Passwords do not match';
             echo $error;
         } else {
-            $user = new User($username, $email, $password, null, null, null, null, null, 1);
+            $user = new User(null,$username, $email, $password, null, null, null, null, null, 1);
             $userModel->save($user);
             header('location:signin');
         }
@@ -56,16 +77,19 @@ class UserController
                 switch ($userData->getRoleId()) {
                     case 1:
                         $_SESSION['isAdmin'] = true;
+                        $_SESSION['userId'] = $userData->getId();
                         header('location:home');
                         echo 'admin';
                         break;
                     case 10:
                         $_SESSION['isSaler'] = true;
-
+                        $_SESSION['userId'] = $userData->getId();
                         echo 'vendeur';
                         break;
                     case 11:
                         $_SESSION['isClient'] = true;
+                        $_SESSION['userId'] = $userData->getId();
+
                         echo 'acheteur';
                         break;
                     
@@ -76,5 +100,11 @@ class UserController
         } else {
             echo 'user doesnt exist';
         }
+    }
+    public function logout(){
+        session_destroy();
+        header("location: signin");
+        exit();
+    
     }
 }

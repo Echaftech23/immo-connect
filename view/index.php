@@ -279,6 +279,7 @@
     ?>
 
     <script type="text/javascript" src="../public/js/navbarScript.js"></script>
+   
 </body>
 
 </html>

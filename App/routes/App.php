@@ -1,4 +1,7 @@
 <?php
+ if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 require_once '../../vendor/autoload.php';
 
@@ -16,12 +19,15 @@ $router->setRoutes([
         'annoucement/make-transaction' => ['TransactionController', 'index'],
         'signup' => ['UserController', 'redirectToSignup'],
         'signin' => ['UserController', 'redirectToSignin'],
+        'logout' => ['UserController', 'logout'],
+        'chat' => ['ChatController', 'index'],
 
     ],
     'POST' => [
         'annoucement/comment/add' => ['CommentaireController', 'save'],
         'submit-signup' => ['UserController', 'signup'],
         'submit-login' => ['UserController', 'signin'],
+        'send-message' => ['ChatController', 'sendMessage'],
     ]
 ]);
 

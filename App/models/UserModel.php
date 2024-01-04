@@ -33,6 +33,7 @@ class UserModel
         } else {
             foreach ($userData as $userRow) {
                 $users[] = new User(
+                    $userRow['id'],
                     $userRow['username'],
                     $userRow['email'],
                     $userRow['password'],
@@ -83,6 +84,7 @@ class UserModel
 
             if ($userData) {
                 return new User(
+                    $userData['id'],
                     $userData['username'],
                     $userData['email'],
                     $userData['password'],
@@ -100,6 +102,35 @@ class UserModel
 
         return null; 
     }
+    public function getUserById($id){
+        $query = $this->database->getConnection()->prepare("SELECT * FROM `users` WHERE id = :id");
+        $query->bindValue(':id', $id);  // Corrected from ':email' to ':id'
+    
+        try {
+            $query->execute();
+            $userData = $query->fetch(PDO::FETCH_ASSOC);
+    
+            if ($userData) {
+                return new User(
+                    $userData['id'],
+                    $userData['username'],
+                    $userData['email'],
+                    $userData['password'],
+                    $userData['image'],
+                    $userData['phone'],
+                    $userData['rate'],
+                    $userData['status'],
+                    $userData['location_id'],
+                    $userData['role_id']
+                );
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    
+        return null;
+    }
+    
     public function setUserStatus($email){
         $query = $this->database->getConnection()->prepare("UPDATE `users` SET `status`='Active' where email=:email");
         $query->bindValue(':email', $email);

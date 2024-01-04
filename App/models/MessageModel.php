@@ -1,101 +1,60 @@
 <?php
 
 namespace App\models;
+
+require '../../vendor/autoload.php';
+
 use App\Dao\Messageinterface;
+use App\database\Database;
 use App\entities\Message;
 use Exception;
-use App\Database\Database, PDO;
+use PDO;
 
-class MessageModel implements Messageinterface 
+class MessageModel
 {
     private $pdo;
 
     public function __construct()
     {
-        $this->pdo = Database::getInstance() -> getConnection();
+        $this->pdo = Database::getInstance()->getConnection();
     }
 
-    public function getByIdSenderReceiver($sender_id , $receiver_id)
+    public function getMessages($loggedInUserId, $otherUserId)
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM messages WHERE sender_id = ? AND receiver_id = ?");
-        $stmt->execute(array('sender_id' => $sender_id , 'receiver_id' => $receiver_id));// fi chek tkhdm
-        $messages = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if ($messages){
-            // ($id, $content, $datePublication, $status, $receiver_id, $sender_id)
-            $message = new Message($messages->id, $messages->content, $messages->datePublication, $messages->status, $messages->receiver_id, $messages->sender_id);
-            return $message;
+        $query = "SELECT m.id AS message_id, m.content, m.datePublication, m.status, 
+                  sender.username AS sender_name, receiver.username AS receiver_name 
+                  FROM messages m 
+                  JOIN users sender ON m.sender_id = sender.id 
+                  JOIN users receiver ON m.receiver_id = receiver.id 
+                  WHERE (m.receiver_id = :loggedInUserId AND m.sender_id = :otherUserId) 
+                     OR (m.receiver_id = :otherUserId AND m.sender_id = :loggedInUserId)";
+
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute([
+            'loggedInUserId' => $loggedInUserId,
+            'otherUserId' => $otherUserId,
+        ]);
+
+        $messagesdata = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        if (empty($messagesdata)) {
+            return [];
+        } else {
+            $messages = [];
+            foreach ($messagesdata as $messagedata) {
+                $messages[] = new Message($messagedata->message_id, $messagedata->content, $messagedata->datePublication, $messagedata->status, $messagedata->receiver_name, $messagedata->sender_name);
+            }
+            return $messages;
         }
-        return false;
     }
 
-
-    public function save($messages)
+    public  function insertMessage($senderId, $receiverId, $messageContent)
     {
-        $stmt = $this->pdo->prepare("INSERT INTO messages (content, datePublication, status, receiver_id, sender_id)
-            VALUES (:messages, :datePublication, :status, :receiver_id, :sender_id)
-        ");
 
-        $stmt->bindParam(':messages', $messages->getmessages());
-        $stmt->bindParam(':datePublication', $messages->getdatePublication());
-        $stmt->bindParam(':status', $messages->getstatus());
-        $stmt->bindParam(':receiver_id', $messages->getreceiver_id());
-        $stmt->bindParam(':sender_id', $messages->getsender_id());
+        $query = "INSERT INTO messages (content, datePublication, status, receiver_id, sender_id) 
+                  VALUES (?, NOW(), 'Unread', ?, ?)";
         
-
-        if ($stmt->execute()) {
-            $messages->setId($this->pdo->lastInsertId());
-            return $messages;
-        } else {
-            return false;
-        }
+        $stmt = $this->pdo->prepare($query);
+        return $stmt->execute([$messageContent, $receiverId, $senderId]);
     }
-
-    public function update($messages)
-    {
-        $stmt = $this->pdo->prepare("UPDATE messages
-            SET status = :status
-            WHERE id = :id
-        ");
-
-        $stmt->bindParam(':id', $messages->getId());
-        $stmt->bindParam(':status', $messages->getstatus());
-
-        if ($stmt->execute()) {
-            return $messages;
-        } else {
-            return false;
-        }
-    }
-
-    public function getById($id)
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM messages WHERE id = :id");
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
-        $messages = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if ($messages){
-            // ($id, $content, $datePublication, $status, $receiver_id, $sender_id)
-            $message = new Message($messages->id, $messages->content, $messages->datePublication, $messages->status, $messages->receiver_id, $messages->sender_id);
-            return $message;
-        }
-        return false;
-    }
-
-    public function deleteById($id)
-    {
-        $messages = $this->getById($id);
-        if (!$messages) {
-            return false;
-        }
-
-        $stmt = $this->pdo->prepare("DELETE FROM messages WHERE id = :id");
-        $stmt->bindParam(':id', $id);
-        return $stmt->execute() ? $messages : false;
-    }
-
-
 }
-
-?>
-
-

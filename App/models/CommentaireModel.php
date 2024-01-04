@@ -5,7 +5,7 @@ namespace App\models;
 use App\Dao\DaoInterface;
 use PDO;
 use Exception;
-use App\Database\Database;
+use App\database\Database;
 use App\entities\Commentaire;
 
 class CommentaireModel

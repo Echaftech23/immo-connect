@@ -65,4 +65,12 @@ class Message {
     public function setSenderId($sender_id) {
         $this->sender_id = $sender_id;
     }
+
+
+
+  
+
 }
+
+
+
