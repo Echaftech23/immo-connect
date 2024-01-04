@@ -16,17 +16,13 @@
     <!-- Container -->
     <div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10">
 
-        <!-- Login component -->
         <div class="flex shadow-md">
-            <!-- Login form -->
             <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white" style="width: 24rem; height: 32rem;">
                 <div class="w-72">
-                    <!-- Heading -->
                     <h1 class="text-xl font-semibold">Welcome to ImmoConnect</h1>
                     <small class="text-gray-400">Please enter your details</small>
 
-                    <!-- Form -->
-                    <form action="signup" method="post" class="mt-4">
+                    <form action="submit-signup" method="post" class="mt-4">
                         <div class="mb-3">
                             <label class="mb-2 block text-xs font-semibold">Username</label>
                             <input type="text" name="username" placeholder="Enter your username" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required />

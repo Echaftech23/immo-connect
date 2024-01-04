@@ -35,8 +35,8 @@
 			<li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
 			
 		</ul>
-		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">Sign up</a>
-		<a class="hidden lg:inline-block py-2 px-6 bg-orange-500 hover:bg-orange-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign In </a>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="signup">Sign up</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-orange-500 hover:bg-orange-600 text-sm text-white font-bold rounded-xl transition duration-200" href="signin">Sign In </a>
 	</nav>
 
 
@@ -75,8 +75,8 @@
 			</div>
 			<div class="mt-auto">
 				<div class="pt-6">
-					<a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign Up</a>
-					<a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-500 hover:bg-orange-600  rounded-xl" href="#">Sign in</a>
+					<a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="signup">Sign Up</a>
+					<a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-500 hover:bg-orange-600  rounded-xl" href="signin">Sign in</a>
 				</div>
 				<p class="my-4 text-xs text-center text-gray-400">
 					<span>Copyright © 2021</span>

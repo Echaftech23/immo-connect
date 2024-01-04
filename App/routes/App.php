@@ -14,13 +14,14 @@ $router->setRoutes([
         'annoucement' => ['ImmobiliersController', 'index'],
         'annoucement/details' => ['ImmobiliersController', 'getImmobilier'],
         'annoucement/make-transaction' => ['TransactionController', 'index'],
-        'signup' => ['UserController', 'signup'],
-        'signin' => ['UserController', 'login'],
+        'signup' => ['UserController', 'redirectToSignup'],
+        'signin' => ['UserController', 'redirectToSignin'],
 
     ],
     'POST' => [
         'annoucement/comment/add' => ['CommentaireController', 'save'],
-        'signup' => ['UserController', 'signup']
+        'submit-signup' => ['UserController', 'signup'],
+        'submit-login' => ['UserController', 'signin'],
     ]
 ]);
 
