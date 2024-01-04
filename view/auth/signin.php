@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../public/css/tailwind.css" rel="stylesheet">    
+    <link href="public/css/tailwind.css" rel="stylesheet">
 </head>
 
 <body>
 
     <!--        navbar        -->
     <?php
-    include '../includes/navbar.php';
+    include '../../view/includes/navbar.php';
     ?>
-
     <!-- Container -->
     <div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10">
 
@@ -21,8 +20,8 @@
         <div class="flex shadow-md">
             <!-- Login banner -->
             <div class="flex flex-wrap content-center justify-center rounded-l-md relative" style="width: 24rem; height: 32rem;">
-                <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-l-md" src="../../public/img/Rectangle 2206.png">
-                <img class="w-full h-full absolute top-1/2" src="../../public/img/log-light.png" style="width: 150px; height: 15px;">
+                <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-l-md" src="public/img/Rectangle 2206.png">
+                <img class="w-full h-full absolute top-1/2" src="public/img/log-light.png" style="width: 150px; height: 15px;">
             </div>
             <!-- Login form -->
             <div class="flex flex-wrap content-center justify-center rounded-r-md bg-white" style="width: 24rem; height: 32rem;">
@@ -35,18 +34,16 @@
                     <form class="mt-4">
                         <div class="mb-3">
                             <label class="mb-2 block text-xs font-semibold">Email</label>
-                            <input type="email" name="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" />
+                            <input type="email" name="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required/>
                         </div>
 
                         <div class="mb-3">
                             <label class="mb-2 block text-xs font-semibold">Password</label>
-                            <input type="password" name="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" />
+                            <input type="password" name="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required/>
                         </div>
 
                         <div class="mb-3 flex flex-wrap content-center">
-                            <div class="min-h-6 mb-0.5 block pl-12 rounded ">
-                                <input id="rememberMe" class="mt-0.54 rounded-10 duration-250 ease-in-out after:rounded after:shadow-soft-2xl after:duration-250 checked:after:translate-x-5.25 h-5 relative float-left -ml-12 w-10 cursor-pointer appearance-none border border-solid border-gray-200 bg-slate-800/10 bg-none bg-contain bg-left bg-no-repeat align-top transition-all after:absolute after:top-px after:h-4 after:w-4 after:translate-x-px after:bg-white after:content-[''] checked:border-slate-800/95 checked:bg-slate-800/95 checked:bg-none checked:bg-right" type="checkbox" checked="" />
-                            </div> <label for="remember" class="mr-auto text-xs font-semibold">Remember for 30 days</label>
+                            <input id="remember" type="checkbox" class="mr-2 checked:bg-orange-500" /> <label for="remember" class="mr-auto text-xs font-semibold">Remember for 30 days</label>
                             <a href="#" class="text-xs font-semibold text-orange-500">Forgot password?</a>
                         </div>
 
@@ -62,7 +59,7 @@
                     <!-- Footer -->
                     <div class="text-center">
                         <span class="text-xs text-gray-400 font-semibold">Don't have account?</span>
-                        <a href="signup.php" class="text-xs font-semibold text-orange-500">Sign up</a>
+                        <a href="signup" class="text-xs font-semibold text-orange-500">Sign up</a>
                     </div>
                 </div>
             </div>
@@ -72,7 +69,7 @@
 
     <!--        footer        -->
     <?php
-    include '../includes/footer.php';
+    include '../../view/includes/footer.php';
     ?>
     <!--             script pour navbar                                    -->
     <script type="text/javascript" src="../../public/js/navbarScript.js"></script>

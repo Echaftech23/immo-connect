@@ -1,3 +1,6 @@
 .env
 vendor
 node_modules
+
+test.php
+test1.php

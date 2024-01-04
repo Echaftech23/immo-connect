@@ -1,15 +1,15 @@
-CREATE DATABASE immoConnect ;
-use immoConnect;
+CREATE DATABASE immo_connect ;
+use immo_connect;
 
 CREATE TABLE roles
 (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE locations
 (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     region VARCHAR(255) NOT NULL,
     city VARCHAR(255) NOT NULL,
     avenue VARCHAR(255) NOT NULL
@@ -24,7 +24,7 @@ CREATE TABLE types
 
 CREATE TABLE users
 (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
@@ -32,7 +32,6 @@ CREATE TABLE users
     phone VARCHAR(20),
     rate DECIMAL(5, 2),
     status VARCHAR(50),
-    isLogin BOOLEAN,
     location_id int,
     role_id int ,
     FOREIGN KEY (location_id) REFERENCES locations(id),
@@ -92,7 +91,18 @@ CREATE TABLE messages (
 (id)
 );
 
-
+CREATE TABLE reply (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    content VARCHAR
+(255),
+    datePublication DATETIME,
+    status ENUM
+('Read', 'Unread'), -- Adjust status values as needed
+    message_id INT,
+   FOREIGN KEY 
+(message_id) REFERENCES messages
+(id)
+);
 
 CREATE TABLE commentaires (
     id INT PRIMARY KEY AUTO_INCREMENT,

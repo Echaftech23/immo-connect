@@ -8,14 +8,19 @@ $router = new Router();
 
 $router->setRoutes([
     'GET' => [
+
         '' => ['HomeController', 'index'],
         'home' => ['HomeController', 'index'],
-        'annoucement'=>['ImmobiliersController', 'index'],
-        'annoucement/details'=>['ImmobiliersController', 'getImmobilier'],
-        'annoucement/make-transaction'=>['TransactionController', 'index'],
+        'annoucement' => ['ImmobiliersController', 'index'],
+        'annoucement/details' => ['ImmobiliersController', 'getImmobilier'],
+        'annoucement/make-transaction' => ['TransactionController', 'index'],
+        'signup' => ['UserController', 'signup'],
+        'signin' => ['UserController', 'login'],
+
     ],
     'POST' => [
-        'annoucement/comment/add' => ['CommentaireController', 'save']
+        'annoucement/comment/add' => ['CommentaireController', 'save'],
+        'signup' => ['UserController', 'signup']
     ]
 ]);
 

@@ -11,3 +11,5 @@ interface DaoInterface
     public function deleteById($id);
 
 }
+
+
