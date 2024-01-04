@@ -193,6 +193,7 @@
                                     <!-- <img class="h-auto w-full mx-auto" src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg" alt=""> -->
                                     <img src="../../public/img/Ellipse 300.png" alt="#">
                                     <form id="uploadForm">
+                                        <!-- <img class="checkbox-no-label" onclick="document.getElementById('file').click()" src="../../public/img/Frame.svg" /> -->
                                         <label class="block mt-4 text-sm font-semibold text-gray-600">Upload New Image:</label>
                                         <input type="file" accept="image/*" id="imageInput" class="mt-1" />
                                         <button type="button" onclick="updateImage()" class="block mt-4 w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3">
@@ -487,7 +488,7 @@
 
 
 
-<script>
+    <script>
         function updateImage() {
             var imageInput = document.getElementById('imageInput');
             var profileImage = document.getElementById('profileImage');
@@ -500,7 +501,7 @@
                 var reader = new FileReader();
 
                 // Mettre à jour l'image source une fois la lecture terminée
-                reader.onloadend = function () {
+                reader.onloadend = function() {
                     profileImage.src = reader.result;
                 };
 

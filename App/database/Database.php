@@ -1,12 +1,11 @@
 <?php
 namespace App\database;
+use PDO;
+use PDOException;
 require __DIR__ . '/../../vendor/autoload.php';
 
 $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
-
-use PDO;
-use PDOException;
 
 class Database
 {
@@ -51,9 +50,3 @@ class Database
         return $this->conn;
     }
 }
-
-/* $database= Database::getInstance();
-if ($database->getConnection()){
-    echo 'good';
-}
-else echo 'no'; */
