@@ -1,7 +1,7 @@
 <?php
 namespace App\Dao;
 
-interface Chatinterface
+interface Messageinterface
 {
     public function getByIdSenderReceiver($sender_id , $receiver_id);
     public function save($entity);

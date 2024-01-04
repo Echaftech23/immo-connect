@@ -1,12 +1,12 @@
 <?php
 
 namespace App\models;
-use App\Dao\Chatinterface;
+use App\Dao\Messageinterface;
 use App\entities\Message;
 use Exception;
-use App\Database\Database, PDO, PDOException;
+use App\Database\Database, PDO;
 
-class MessageModel implements Chatinterface 
+class MessageModel implements Messageinterface 
 {
     private $pdo;
 
@@ -69,14 +69,31 @@ class MessageModel implements Chatinterface
 
     public function getById($id)
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM messages WHERE receiver_id = :id");
+        $stmt = $this->pdo->prepare("SELECT * FROM messages WHERE id = :id");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
-        $stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
-        return $stmt->fetch();
+        $messages = $stmt->fetchAll(PDO::FETCH_OBJ);
+        if ($messages){
+            // ($id, $content, $datePublication, $status, $receiver_id, $sender_id)
+            $message = new Message($messages->id, $messages->content, $messages->datePublication, $messages->status, $messages->receiver_id, $messages->sender_id);
+            return $message;
+        }
+        return false;
     }
 
-    
+    public function deleteById($id)
+    {
+        $messages = $this->getById($id);
+        if (!$messages) {
+            return false;
+        }
+
+        $stmt = $this->pdo->prepare("DELETE FROM messages WHERE id = :id");
+        $stmt->bindParam(':id', $id);
+        return $stmt->execute() ? $messages : false;
+    }
+
+
 }
 
 ?>
