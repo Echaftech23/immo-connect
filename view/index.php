@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../public/css/tailwind.css" rel="stylesheet">
-<link rel="stylesheet"
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
     <style>
         body {
@@ -43,7 +43,7 @@
     <!--        navbar        -->
     <?php
 
-    include './includes/navbar.php';
+    include 'includes/navbar.php';
     ?>
 
 
@@ -63,7 +63,7 @@
             </div>
 
             <div class="lg:w-1/2">
-                <img src="../public/Img/homeImage.png" alt="Your Image" class="w-full rounded">
+                <img src="../public/Img/log-light.png" alt="Home Image" class="w-full rounded">
             </div>
 
         </div>
@@ -82,44 +82,44 @@
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-fuchsia-200 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-green-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-blue-300 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-pink-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-lime-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
 
             <div class="bg-green-200 p-3 rounded ">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-fuchsia-200 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
@@ -276,11 +276,11 @@
 
 
 
-    <!--        footer        -->
+    
     <?php
     include 'includes/footer.php';
     ?>
-    <!--             script pour navbar                                    -->
+                                       
     <script type="text/javascript" src="../public/js/navbarScript.js"></script>
 </body>
 
