@@ -9,8 +9,10 @@ $router = new Router();
 $router->setRoutes([
     'GET' => [
         '' => ['HomeController', 'index'],
+        'home' => ['HomeController', 'index'],
         'annoucement'=>['ImmobiliersController', 'index'],
         'annoucement/details'=>['ImmobiliersController', 'getImmobilier'],
+        'annoucement/make-transaction'=>['TransactionController', 'index'],
     ],
     'POST' => [
         'annoucement/comment/add' => ['CommentaireController', 'save']

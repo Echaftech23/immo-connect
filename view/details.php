@@ -80,7 +80,7 @@
 
             <div class=" items-center mt-4">
                 <p class="text-2xl font-bold">$<?= $immobilier->getPrice() ?></p>
-                <button class="ml-4 bg-green-500 text-white px-4 py-2 rounded-3xl">Buy Now</button>
+                <a href="make-transaction" class="ml-4 bg-green-500 text-white px-4 py-2 rounded-3xl">Buy Now</a>
             </div>
         </div>
     </div>
