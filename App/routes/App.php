@@ -8,16 +8,15 @@ $router = new Router();
 
 $router->setRoutes([
     'GET' => [
-<<<<<<< HEAD
+
         'signup' => ['AuthController', 'signup'],
         'signin' => ['AuthController', 'login'],
-=======
+
         '' => ['HomeController', 'index'],
         'home' => ['HomeController', 'index'],
         'annoucement'=>['ImmobiliersController', 'index'],
         'annoucement/details'=>['ImmobiliersController', 'getImmobilier'],
         'annoucement/make-transaction'=>['TransactionController', 'index'],
->>>>>>> meqdar
     ],
     'POST' => [
         'annoucement/comment/add' => ['CommentaireController', 'save']

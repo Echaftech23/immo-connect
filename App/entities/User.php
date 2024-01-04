@@ -2,13 +2,8 @@
 
 namespace App\entities;
 
-<<<<<<< HEAD
-class User
-{
-=======
 class User extends GenericEntity {
-    private $id;
->>>>>>> meqdar
+
     private $username;
     private $email;
     private $password;
