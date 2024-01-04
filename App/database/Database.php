@@ -53,7 +53,6 @@ class Database
 }
 
 
-
 /*  $database= Database::getInstance();
 if ($database->getConnection()){
     echo 'good';

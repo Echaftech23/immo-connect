@@ -9,7 +9,6 @@ $router = new Router();
 $router->setRoutes([
     'GET' => [
 
-
         '' => ['HomeController', 'index'],
         'home' => ['HomeController', 'index'],
         'annoucement' => ['ImmobiliersController', 'index'],
