@@ -1,21 +1,20 @@
 <?php
 
 namespace App\entities;
+class User extends GenericEntity {
+    private $id;
 
-class User
-{
     private $username;
     private $email;
     private $password;
     private $image = '';
-    private $phone;
-    private $rate;
-    private $status = 'offline';
-    private $isLogin = false;
-    private $location_id;
-    private $role_id;
+    private $phone = NULL;
+    private $rate = NULL;
+    private $status = 'Online';
+    private $location_id = NULL;
+    private $role_id = '1';
 
-    public function __construct($username, $email, $password, $image, $phone, $rate, $status, $isLogin, $location_id, $role_id)
+    public function __construct($username, $email, $password, $image, $phone, $rate, $status, $location_id, $role_id)
     {
         $this->username = $username;
         $this->email = $email;
@@ -24,7 +23,6 @@ class User
         $this->phone = $phone;
         $this->rate = $rate;
         $this->status = $status;
-        $this->isLogin = $isLogin;
         $this->location_id = $location_id;
         $this->role_id = $role_id;
     }
@@ -99,16 +97,6 @@ class User
         $this->status = $status;
     }
 
-    public function getIsLogin()
-    {
-        return $this->isLogin;
-    }
-
-    public function setIsLogin($isLogin)
-    {
-        $this->isLogin = $isLogin;
-    }
-
     public function getLocationId()
     {
         return $this->location_id;
@@ -128,4 +116,5 @@ class User
     {
         $this->role_id = $role_id;
     }
+   
 }

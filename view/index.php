@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../public/css/tailwind.css" rel="stylesheet">
-<link rel="stylesheet"
+    <link href="public/css/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
     <style>
         body {
@@ -33,38 +33,17 @@
             background-color: #56ff5615;
         }
     </style>
-<<<<<<< HEAD
-    <!-- <link href="../public/css/tailwind.css" rel="stylesheet"> -->
-
-    <script src="https://cdn.tailwindcss.com"></script>
-=======
 
     <script src="https://cdn.tailwindcss.com"></script>
 
->>>>>>> b8f9597ff4f71d9210f88a65f7b897167e0a6a79
 </head>
 
 <body>
 
-<<<<<<< HEAD
-<!--        navbar        -->
-<?php
-include 'includes/navbar.php';
-?>
-
-    
-<!--      main     -->
-<!-- <h1 class="text-3xl font-bold underline bg-blue-200 text-emerald-500">
-=======
-    <!--        navbar        -->
-    <?php
-    include 'Include/navbar.php';
-=======
     <!--        navbar        -->
     <?php
 
-    include './includes/navbar.php';
->>>>>>> b8f9597ff4f71d9210f88a65f7b897167e0a6a79
+    include 'includes/navbar.php';
     ?>
 
 
@@ -84,7 +63,7 @@ include 'includes/navbar.php';
             </div>
 
             <div class="lg:w-1/2">
-                <img src="../public/Img/homeImage.png" alt="Your Image" class="w-full rounded">
+                <img src="../public/Img/log-light.png" alt="Home Image" class="w-full rounded">
             </div>
 
         </div>
@@ -103,44 +82,44 @@ include 'includes/navbar.php';
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-fuchsia-200 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-green-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-blue-300 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-pink-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-lime-400 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
 
             <div class="bg-green-200 p-3 rounded ">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
             </div>
             <div class="bg-fuchsia-200 p-3 rounded">
-                <img src="../public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
+                <img src="public/Img/annoucement1.jpg" alt="image" class="w-full h-32 object-cover rounded mb-4">
                 <h3 class="text-lg font-semibold mb-2">Single-Family Home</h3>
                 <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dictum
                     nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
@@ -297,11 +276,11 @@ include 'includes/navbar.php';
 
 
 
-    <!--        footer        -->
+    
     <?php
     include 'includes/footer.php';
     ?>
-    <!--             script pour navbar                                    -->
+                                       
     <script type="text/javascript" src="../public/js/navbarScript.js"></script>
 </body>
 

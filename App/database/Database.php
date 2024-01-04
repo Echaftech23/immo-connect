@@ -49,4 +49,12 @@ class Database
     {
         return $this->conn;
     }
+
 }
+
+
+/*  $database= Database::getInstance();
+if ($database->getConnection()){
+    echo 'good';
+}
+else echo 'no';  */
