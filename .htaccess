@@ -2,7 +2,7 @@
     RewriteEngine On
 
     # Exclude specific directories from the rewrite
-    RewriteRule ^(?:immo-connect/public/(?:js|css|Img)/) - [L]
+    RewriteRule ^(?:public/(?:js|css|Img)/) - [L]
 
     # Rewrite all other requests to app/routes/RouteHandler.php?url=<request>
     # RewriteCond %{REQUEST_FILENAME} !-f

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Page</title>
-    <link href="../public/css/tailwind.css" rel="stylesheet">
+    <link href="public/css/tailwind.css" rel="stylesheet">
 
 
 </head>
@@ -99,7 +99,7 @@
                 const matchesPrice = isNaN(price) || price.toString().includes(search);
                 const matchesTitle = title.includes(search);
 
-                return matchesPrice || matchesTitle; // Use '||' for OR condition
+                return matchesPrice || matchesTitle; 
             });
 
             filteredAnnouncements.sort(function (a, b) {
