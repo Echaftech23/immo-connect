@@ -1,3 +1,11 @@
-#RewriteEngine On
-#DirectoryIndex app/controllers/RouteHandler.php
-#RewriteRule ^(.*)$ immo-connect/app/routes/App.php?url=$1 [QSA,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Exclude specific directories from the rewrite
+    RewriteRule ^(?:immo-connect/public/(?:js|css|Img)/) - [L]
+
+    # Rewrite all other requests to app/routes/RouteHandler.php?url=<request>
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ App/routes/App.php?url=$1 [QSA,L]
+</IfModule>

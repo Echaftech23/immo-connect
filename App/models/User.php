@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 use App\Dao\DaoInterface;
@@ -95,3 +96,5 @@ class UserModel extends User implements DaoInterface
         return $stmt->execute() ? $user : false;
     }
 }
+=======
+>>>>>>> meqdar

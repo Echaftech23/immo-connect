@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Dao;
+use App\entities\GenericEntity;
 interface DaoInterface
 {
     public function getAll();
@@ -9,4 +11,3 @@ interface DaoInterface
     public function deleteById($id);
 
 }
-

@@ -49,4 +49,14 @@ class Database
     {
         return $this->conn;
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+/*  $database= Database::getInstance();
+if ($database->getConnection()){
+    echo 'good';
+}
+else echo 'no';  */
+>>>>>>> meqdar
