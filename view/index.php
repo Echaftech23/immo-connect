@@ -143,7 +143,7 @@
                         dictum nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
                 </div>
                 <div class="md:w-1/2 mb-4 md:mb-0 md:mr-4">
-                    <img src="../public/Img/Horizontal.png" alt="Image 3" class="w-fit object-cover rounded mb-4 md:mb-0 md:mr-4">
+                    <img src="public/Img/Horizontal.png" alt="Image 3" class="w-fit object-cover rounded mb-4 md:mb-0 md:mr-4">
                 </div>
             </div>
 
@@ -258,7 +258,7 @@
             </div>
         </div>
 
-        <div class="mt-10 items-center p-20" style="background-image: url(../public/Img/background_subscribe.png); background-size:cover;">
+        <div class="mt-10 items-center p-20" style="background-image: url(public/Img/background_subscribe.png); background-size:cover;">
             <h1 class="text-4xl text-center text-white font-bold mb-4">Subscribe for Exclusive Deals & Offers</h1>
 
 
@@ -278,7 +278,7 @@
     include 'includes/footer.php';
     ?>
 
-    <script type="text/javascript" src="../public/js/navbarScript.js"></script>
+    <script type="text/javascript" src="public/js/navbarScript.js"></script>
    
 </body>
 
