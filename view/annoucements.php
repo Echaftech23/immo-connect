@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Page</title>
+<<<<<<< HEAD
     <link href="public/css/tailwind.css" rel="stylesheet">
+=======
+    <link href="../public/css/tailwind.css" rel="stylesheet">
+>>>>>>> f541c07cd3f3d916fe4cc237aef84f59458d86e2
 
 
 </head>
@@ -78,48 +82,49 @@
     include 'Includes/footer.php';
     ?>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const container = document.querySelector(".flex-wrap");
-            const priceFilter = document.getElementById("priceFilter");
-            const searchInput = document.getElementById("searchInput");
+ 
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".flex-wrap");
+        const priceFilter = document.getElementById("priceFilter");
+        const searchInput = document.getElementById("searchInput");
 
-            const announcements = Array.from(container.children);
+        const announcements = Array.from(container.children);
 
-            priceFilter.addEventListener("change", filterAnnouncements);
-            searchInput.addEventListener("input", filterAnnouncements);
+        priceFilter.addEventListener("change", filterAnnouncements);
+        searchInput.addEventListener("input", filterAnnouncements);
 
-            function filterAnnouncements() {
-                const order = priceFilter.value;
-                const search = searchInput.value.toLowerCase();
+        function filterAnnouncements() {
+            const order = priceFilter.value;
+            const search = searchInput.value.toLowerCase();
 
-                const filteredAnnouncements = announcements.filter(function(announcement) {
-                    const price = parseFloat(announcement.getAttribute("data-price"));
-                    const title = announcement.querySelector(".text-lg").textContent.toLowerCase();
+            const filteredAnnouncements = announcements.filter(function (announcement) {
+                const price = parseFloat(announcement.getAttribute("data-price"));
+                const title = announcement.querySelector(".text-lg").textContent.toLowerCase();
+                
+                const matchesPrice = isNaN(price) || price.toString().includes(search);
+                const matchesTitle = title.includes(search);
 
-                    const matchesPrice = isNaN(price) || price.toString().includes(search);
-                    const matchesTitle = title.includes(search);
+                return matchesPrice || matchesTitle; // Use '||' for OR condition
+            });
 
-                    return matchesPrice || matchesTitle;
-                });
+            filteredAnnouncements.sort(function (a, b) {
+                const priceA = parseFloat(a.getAttribute("data-price"));
+                const priceB = parseFloat(b.getAttribute("data-price"));
 
-                filteredAnnouncements.sort(function(a, b) {
-                    const priceA = parseFloat(a.getAttribute("data-price"));
-                    const priceB = parseFloat(b.getAttribute("data-price"));
+                if (order === "asc") {
+                    return priceA - priceB;
+                } else {
+                    return priceB - priceA;
+                }
+            });
 
-                    if (order === "asc") {
-                        return priceA - priceB;
-                    } else {
-                        return priceB - priceA;
-                    }
-                });
-
-                container.innerHTML = "";
-                filteredAnnouncements.forEach(function(announcement) {
-                    container.appendChild(announcement);
-                });
-            }
-        });
-    </script>
+            container.innerHTML = "";
+            filteredAnnouncements.forEach(function (announcement) {
+                container.appendChild(announcement);
+            });
+        }
+    });
+</script>
 
 
 

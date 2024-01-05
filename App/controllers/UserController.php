@@ -12,9 +12,10 @@ class UserController
 
     public function signup()
     {
-        require '../../view/auth/signup.php';
 
-        if (isset($_POST['signup'])) {
+        include '../../view/auth/signup.php';
+
+        if(isset($_POST['signup'])){
 
             $userModel = new UserModel();
             $user = $userModel->getById(100);
@@ -31,6 +32,7 @@ class UserController
 
                 if ($user_id !== false) {
                     exit(header('location:signin'));
+
                 } else {
                     echo "Something went wrong";
                 }

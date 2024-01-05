@@ -1,7 +1,6 @@
 <?php
 
 namespace App\controllers;
-
 require __DIR__ . '/../../vendor/autoload.php';
 
 use App\entities\Immobilier;
@@ -16,3 +15,4 @@ class HomeController
         include '../../view/index.php';
     }
 }
+

@@ -21,6 +21,7 @@ $router->setRoutes([
         'delete' => ['ImmobiliersController', 'deleteImmobilier'],
         'chat' => ['UserController', 'chat']
 
+
     ],
     'POST' => [
         'annoucement/comment/add' => ['CommentaireController', 'save'],
@@ -58,4 +59,5 @@ if (isset($_GET['url'])) {
     } catch (Exception $e) {
         echo 'Caught exception: ', $e->getMessage(), "\n";
     }
+
 }

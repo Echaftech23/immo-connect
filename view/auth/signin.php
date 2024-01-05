@@ -8,6 +8,11 @@
 </head>
 
 <body>
+
+    <!--        navbar        -->
+    <?php
+    include '../../view/includes/navbar.php';
+    ?>
     <!-- Container -->
     <div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10">
 

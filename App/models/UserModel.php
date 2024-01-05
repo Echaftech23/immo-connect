@@ -6,7 +6,8 @@ use App\Dao\DaoInterface;
 use App\entities\User;
 use App\database\Database, PDO, Exception;
 
-class UserModel implements DaoInterface
+
+class UserModel implements DaoInterface 
 {
     private $pdo;
 
@@ -14,6 +15,7 @@ class UserModel implements DaoInterface
     {
         $this->pdo = Database::getInstance()->getConnection();
     }
+    
 
 
     public function getAll()
@@ -49,9 +51,10 @@ class UserModel implements DaoInterface
         $location_id = $user->getLocationId();
         $role_id = $user->getRoleId();
 
+        
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':password',$password);
         $stmt->bindParam(':image', $image);
         $stmt->bindParam(':phone', $phone);
         $stmt->bindParam(':rate', $rate);

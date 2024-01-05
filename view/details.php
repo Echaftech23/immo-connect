@@ -5,37 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immobilier Details</title>
-
+    
     <style>
-        .images {
-            display: flex;
-            gap: 2rem;
+        .images{
+    display: flex;
+    gap: 2rem;
 
-        }
+}
 
-        .img1 {
-            width: 750px;
-            height: 441px;
-            border-radius: 48px;
-            object-fit: cover;
-        }
+.img1{
+    width: 750px;
+    height: 441px;
+    border-radius: 48px;
+    object-fit: cover;
+}
+.image2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 
-        .image2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .img2 {
-            width: 112px;
-            height: 67px;
-            border-radius: 15px;
-            cursor: pointer;
-            object-fit: cover;
-        }
-
+.img2{
+    width: 112px;
+    height: 67px;
+    border-radius: 15px;
+    cursor: pointer;
+    object-fit: cover;
+}
         .comments-container {
             max-height: 450px;
             overflow-y: auto;
@@ -49,7 +47,7 @@
 
     <div class="flex gap-4">
         <div class="images flex-shrink-0">
-            <div class="image2">
+        <div class="image2">
                 <img src="../public/Img/annoucement1.jpg" class="img2">
                 <img src="../public/Img/annoucement1.jpg" class="img2">
                 <img src="../public/Img/Horizontal.png" class="img2">

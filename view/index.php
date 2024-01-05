@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="public/css/tailwind.css" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
+=======
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
+>>>>>>> f541c07cd3f3d916fe4cc237aef84f59458d86e2
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -272,11 +277,11 @@
 
 
 
-
+    
     <?php
     include 'includes/footer.php';
     ?>
-
+                                       
     <script type="text/javascript" src="../public/js/navbarScript.js"></script>
 </body>
 

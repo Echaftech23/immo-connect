@@ -16,7 +16,7 @@ class Reply
         $this->content = $content;
         $this->datePublication = $datePublication;
         $this->status = $status;
-        $this->message_id = $message_id;
+        $this-> message_id = $message_id;
     }
 
     // public function getId() {
@@ -66,4 +66,5 @@ class Reply
     // public function setSenderId($sender_id) {
     //     $this->sender_id = $sender_id;
     // }
+
 }

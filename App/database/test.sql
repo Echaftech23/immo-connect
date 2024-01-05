@@ -46,3 +46,4 @@ INSERT INTO transactions (id, details, user_id, immobilier_id) VALUES
 INSERT INTO saved (user_id, immobilier_id) VALUES
 (3, 1),
 (3, 2);
+

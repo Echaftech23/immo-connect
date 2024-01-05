@@ -1,9 +1,13 @@
 <?php
 
 namespace App\entities;
+<<<<<<< HEAD
 
 class Immobilier extends GenericEntity
 {
+=======
+class Immobilier extends GenericEntity {
+>>>>>>> f541c07cd3f3d916fe4cc237aef84f59458d86e2
     private $id;
     private $title;
     private $description;
@@ -22,8 +26,7 @@ class Immobilier extends GenericEntity
     private $user_id;
 
 
-    public function __construct($id, $title, $description, $price, $image1, $image2, $image3, $image4, $image5, $status, $rooms, $flooring_type, $bathrooms, $location_id, $type_id, $user_id)
-    {
+    public function __construct($id, $title, $description, $price, $image1, $image2, $image3, $image4, $image5, $status, $rooms, $flooring_type, $bathrooms, $location_id, $type_id, $user_id) {
         $this->id = $id;
         $this->title = $title;
         $this->description = $description;
@@ -40,6 +43,8 @@ class Immobilier extends GenericEntity
         $this->location_id = $location_id;
         $this->type_id = $type_id;
         $this->user_id = $user_id;
+
+
     }
 
     public function getId()
@@ -192,13 +197,11 @@ class Immobilier extends GenericEntity
         $this->type_id = $type_id;
     }
 
-    public function getUserId()
-    {
+    public function getUserId() {
         return $this->user_id;
     }
 
-    public function setUserId($user_id)
-    {
+    public function setUserId($user_id) {
         $this->user_id = $user_id;
     }
 }

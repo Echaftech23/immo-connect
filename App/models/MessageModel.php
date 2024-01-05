@@ -7,7 +7,8 @@ use App\entities\Message;
 use Exception;
 use App\Database\Database, PDO;
 
-class MessageModel implements Messageinterface
+
+class MessageModel implements Messageinterface 
 {
     private $pdo;
 
@@ -74,7 +75,7 @@ class MessageModel implements Messageinterface
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         $messages = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if ($messages) {
+        if ($messages){
             // ($id, $content, $datePublication, $status, $receiver_id, $sender_id)
             $message = new Message($messages->id, $messages->content, $messages->datePublication, $messages->status, $messages->receiver_id, $messages->sender_id);
             return $message;
@@ -93,4 +94,6 @@ class MessageModel implements Messageinterface
         $stmt->bindParam(':id', $id);
         return $stmt->execute() ? $messages : false;
     }
+
+
 }
