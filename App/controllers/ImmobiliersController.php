@@ -22,12 +22,12 @@ class ImmobiliersController
 
     public function getImmobilier()
     {
-        // $id= $_GET['id'];
-        // $immobilierModel= new ImmobilierModel() ;
-        // $immobilier=$immobilierModel->getById($id);
+        $id= $_GET['id'];
+        $immobilierModel= new ImmobilierModel() ;
+        $immobilier=$immobilierModel->getById($id);
 
-        // $commentaireModel= new CommentaireModel();
-        // $comments=$commentaireModel->getAll($id);
+        $commentaireModel= new CommentaireModel();
+        $comments=$commentaireModel->getAll($id);
         include '../../view/details.php';
     }
 
@@ -36,9 +36,24 @@ class ImmobiliersController
         include '../../view/vendeur/Dashboard.php';
         exit();
     }
+
     public function vendeurImmobilier()
     {
+        $immobilierModel = new ImmobilierModel();
+        $immobiliers = $immobilierModel->getAll();
+        
         include '../../view/vendeur/add-imobilier.php';
+        exit();
+    }
+
+    public function deleteImmobilier()
+    {
+        $id = $_GET['id'];
+        $immobilierModel = new ImmobilierModel();
+
+        $immobilierModel->deleteById($id);
+
+        header('location:add-imobilier');
         exit();
     }
 }

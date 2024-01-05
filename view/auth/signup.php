@@ -66,11 +66,9 @@
                 <img class="w-full h-full absolute top-1/2" src="public/img/log-light.png" style="width: 150px; height: 15px;">
             </div>
         </div>
-
     </div>
-
     <!--        footer        -->
-    <?php include '../../view/includes/footer.php'; ?>
+<?php include '../../view/includes/footer.php';?>
     <!--             script pour navbar                                    -->
     <script type="text/javascript" src="public/js/navbarScript.js"></script>
 </body>
