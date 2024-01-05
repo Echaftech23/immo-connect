@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Page</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link href="public/css/tailwind.css" rel="stylesheet">
 =======
     <link href="../public/css/tailwind.css" rel="stylesheet">
 >>>>>>> f541c07cd3f3d916fe4cc237aef84f59458d86e2
+=======
+    <link href="public/css/tailwind.css" rel="stylesheet">
+>>>>>>> meqdar
 
 
 </head>
@@ -64,7 +68,7 @@
                         </div>
 
                         <div class="flex justify-between p-4">
-                            <a href="annoucement/details?id=<?= $immobilier->getId() ?>" class="bg-blue-500 text-white px-4 py-2 rounded-full">Explore Details</a>
+                            <a href="annoucement-details?id=<?= $immobilier->getId() ?>" class="bg-blue-500 text-white px-4 py-2 rounded-full">Explore Details</a>
                             <button class="bg-orange-500 text-white px-4 py-2 rounded-full">Message Seller</button>
                         </div>
                     </div>
@@ -104,7 +108,7 @@
                 const matchesPrice = isNaN(price) || price.toString().includes(search);
                 const matchesTitle = title.includes(search);
 
-                return matchesPrice || matchesTitle; // Use '||' for OR condition
+                return matchesPrice || matchesTitle; 
             });
 
             filteredAnnouncements.sort(function (a, b) {

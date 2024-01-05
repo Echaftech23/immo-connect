@@ -3,137 +3,155 @@
 namespace App\models;
 
 use App\Dao\DaoInterface;
+use App\Database\Database;
+use PDO, PDOException;
 use App\entities\User;
-use App\database\Database, PDO, Exception;
 
-
-class UserModel implements DaoInterface
+class UserModel
 {
-    private $pdo;
+    private $database;
 
     public function __construct()
     {
-        $this->pdo = Database::getInstance()->getConnection();
+        $this->database = Database::getInstance();
     }
 
-
-
+    public function getDatabase()
+    {
+        return $this->database;
+    }
     public function getAll()
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM users");
-        $stmt->execute();
-        $usersData = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if (empty($users)) {
-            return [];
+        $query = $this->database->getConnection()->query("SELECT users.*, roles.id as role_id, roles.name as role_name 
+        FROM `users` 
+        LEFT JOIN roles on roles.id=users.role_id  ");
+        $userData = $query->fetchAll(PDO::FETCH_ASSOC);
+        $users = array();
+
+        if (empty($userData)) {
+            return $users;
         } else {
-            foreach ($usersData as $userData) {
-                $user = new User($userData->username, $userData->email, $userData->password, $userData->image, $userData->phone, $userData->rate, $userData->status, $userData->location_id, $userData->role_id);
+            foreach ($userData as $userRow) {
+                $users[] = new User(
+                    $userRow['id'],
+                    $userRow['username'],
+                    $userRow['email'],
+                    $userRow['password'],
+                    $userRow['image'],
+                    $userRow['phone'],
+                    $userRow['rate'],
+                    $userRow['status'],
+                    $userRow['location_id'],
+                    $userRow['role_id']
+                );
             }
         }
-        $users[] = $user;
+
         return $users;
     }
-    public function getAllVendeurs()
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE role_id = 2 ");
-        $stmt->execute();
-        $usersData = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if (!$usersData) {
-            return [];
-        } else {
-            foreach ($usersData as $userData) {
-                $user = new User($userData->username, $userData->email, $userData->password, $userData->image, $userData->phone, $userData->rate, $userData->status, $userData->location_id, $userData->role_id);
-                $users[] = $user;
-            }
-        }
-        return $users;
-    }
+
     public function save($user)
     {
-        $stmt = $this->pdo->prepare("
-            INSERT INTO users (username, email, password, image, phone, rate, status, location_id, role_id)
-            VALUES (:username, :email, :password, :image, :phone, :rate, :status, :location_id, :role_id)
-        ");
+        $hashedPassword= password_hash($user->getPassword() ,PASSWORD_DEFAULT);
+        $statement = $this->getDatabase()->getConnection()->prepare("INSERT INTO `users` (username, email, password, image, phone, rate, status, location_id, role_id) 
+    VALUES (:username, :email, :password, :image, :phone, :rate, :status, :location_id, :role_id)");
 
-        $username = $user->getUsername();
-        $email = $user->getEmail();
-        $password = $user->getPassword();
-        $image = $user->getImage();
-        $phone = $user->getPhone();
-        $rate = $user->getRate();
-        $status = $user->getStatus();
-        $location_id = $user->getLocationId();
-        $role_id = $user->getRoleId();
+        $statement->bindValue(':username', $user->getUsername());
+        $statement->bindValue(':email', $user->getEmail());
+        $statement->bindValue(':password', $hashedPassword);
+        $statement->bindValue(':image', $user->getImage());
+        $statement->bindValue(':phone', $user->getPhone());
+        $statement->bindValue(':rate', $user->getRate());
+        $statement->bindValue(':status', $user->getStatus());
+        $statement->bindValue(':location_id', $user->getLocationId());
+        $statement->bindValue(':role_id', $user->getRoleId());
 
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', $password);
-        $stmt->bindParam(':image', $image);
-        $stmt->bindParam(':phone', $phone);
-        $stmt->bindParam(':rate', $rate);
-        $stmt->bindParam(':status', $status);
-        $stmt->bindParam(':location_id', $location_id);
-        $stmt->bindParam(':role_id', $role_id);
         try {
-            $stmt->execute();
-            return $this->pdo->lastInsertId();
-        } catch (Exception $e) {
-            return false;
+            $statement->execute();
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
         }
     }
 
-
-    public function update($user)
+    public function getUserByEmail($email)
     {
-        $stmt = $this->pdo->prepare("
-            UPDATE users
-            SET username = :username, email = :email, password = :password, image = :image,
-                phone = :phone, rate = :rate, status = :status, isLogin = :isLogin,
-                location_id = :location_id, role_id = :role_id
-            WHERE id = :id
-        ");
+        $query = $this->database->getConnection()->prepare("SELECT * FROM `users` WHERE email = :email");
+        $query->bindValue(':email', $email);
 
-        $stmt->bindParam(':username', $user->getUsername());
-        $stmt->bindParam(':email', $user->getEmail());
-        $stmt->bindParam(':password', $user->getPassword());
-        $stmt->bindParam(':image', $user->getImage());
-        $stmt->bindParam(':phone', $user->getPhone());
-        $stmt->bindParam(':rate', $user->getRate());
-        $stmt->bindParam(':status', $user->getStatus());
-        $stmt->bindParam(':isLogin', $user->getIsLogin());
-        $stmt->bindParam(':location_id', $user->getLocationId());
-        $stmt->bindParam(':role_id', $user->getRoleId());
+        try {
+            $query->execute();
+            $userData = $query->fetch(PDO::FETCH_ASSOC);
 
-        if ($stmt->execute()) {
-            return $user;
-        } else {
-            return false;
-        }
-    }
-
-    public function getById($id)
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE id = :id");
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
-        $user = $stmt->fetch(PDO::FETCH_OBJ);
-        if ($user) {
-            $user = new User($user->username, $user->email, $user->password, $user->image, $user->phone, $user->rate, $user->status, $user->location_id, $user->role_id);
-            return $user;
-        } else {
-            return null;
-        }
-    }
-
-    public function deleteById($id)
-    {
-        $user = $this->getById($id);
-        if (!$user) {
-            return false;
+            if ($userData) {
+                return new User(
+                    $userData['id'],
+                    $userData['username'],
+                    $userData['email'],
+                    $userData['password'],
+                    $userData['image'],
+                    $userData['phone'],
+                    $userData['rate'],
+                    $userData['status'],
+                    $userData['location_id'],
+                    $userData['role_id']
+                );
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
         }
 
-        $stmt = $this->pdo->prepare("DELETE FROM users WHERE id = :id");
-        $stmt->bindParam(':id', $id);
-        return $stmt->execute() ? $user : false;
+        return null; 
     }
+    public function getUserById($id){
+        $query = $this->database->getConnection()->prepare("SELECT * FROM `users` WHERE id = :id");
+        $query->bindValue(':id', $id);  // Corrected from ':email' to ':id'
+    
+        try {
+            $query->execute();
+            $userData = $query->fetch(PDO::FETCH_ASSOC);
+    
+            if ($userData) {
+                return new User(
+                    $userData['id'],
+                    $userData['username'],
+                    $userData['email'],
+                    $userData['password'],
+                    $userData['image'],
+                    $userData['phone'],
+                    $userData['rate'],
+                    $userData['status'],
+                    $userData['location_id'],
+                    $userData['role_id']
+                );
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    
+        return null;
+    }
+    
+    public function setUserStatus($email){
+        $query = $this->database->getConnection()->prepare("UPDATE `users` SET `status`='Active' where email=:email");
+        $query->bindValue(':email', $email);
+
+    }
+
+
+public function getAllVendeurs()
+{
+    $stmt = $this->database->prepare("SELECT * FROM users WHERE role_id = 2 ");
+    $stmt->execute();
+    $usersData = $stmt->fetchAll(PDO::FETCH_OBJ);
+    if (!$usersData) {
+        return [];
+    } else {
+        foreach ($usersData as $userData) {
+            $user = new User($userData->id,$userData->username, $userData->email, $userData->password, $userData->image, $userData->phone, $userData->rate, $userData->status, $userData->location_id, $userData->role_id);
+            $users[] = $user;
+        }
+    }
+    return $users;
 }
+}
+

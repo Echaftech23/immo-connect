@@ -2,98 +2,138 @@
 
 namespace App\models;
 
-use App\Dao\Messageinterface;
-use App\entities\Message;
-use Exception;
-use App\Database\Database, PDO;
+use App\Dao\DaoInterface;
+use App\Database\Database;
+use PDO, PDOException;
+use App\entities\User;
 
-
-class MessageModel implements Messageinterface 
+class UserModel
 {
-    private $pdo;
+    private $database;
 
     public function __construct()
     {
-        $this->pdo = Database::getInstance()->getConnection();
+        $this->database = Database::getInstance();
     }
 
-    public function getByIdSenderReceiver($sender_id, $receiver_id)
+    public function getDatabase()
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM messages WHERE sender_id = ? AND receiver_id = ?");
-        $stmt->execute(array('sender_id' => $sender_id, 'receiver_id' => $receiver_id)); // fi chek tkhdm
-        $messages = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if ($messages) {
-            // ($id, $content, $datePublication, $status, $receiver_id, $sender_id)
-            $message = new Message($messages->id, $messages->content, $messages->datePublication, $messages->status, $messages->receiver_id, $messages->sender_id);
-            return $message;
-        }
-        return false;
+        return $this->database;
     }
-
-
-    public function save($messages)
+    public function getAll()
     {
-        $stmt = $this->pdo->prepare("INSERT INTO messages (content, datePublication, status, receiver_id, sender_id)
-            VALUES (:messages, :datePublication, :status, :receiver_id, :sender_id)
-        ");
+        $query = $this->database->getConnection()->query("SELECT users.*, roles.id as role_id, roles.name as role_name 
+        FROM `users` 
+        LEFT JOIN roles on roles.id=users.role_id  ");
+        $userData = $query->fetchAll(PDO::FETCH_ASSOC);
+        $users = array();
 
-        $stmt->bindParam(':messages', $messages->getmessages());
-        $stmt->bindParam(':datePublication', $messages->getdatePublication());
-        $stmt->bindParam(':status', $messages->getstatus());
-        $stmt->bindParam(':receiver_id', $messages->getreceiver_id());
-        $stmt->bindParam(':sender_id', $messages->getsender_id());
-
-
-        if ($stmt->execute()) {
-            $messages->setId($this->pdo->lastInsertId());
-            return $messages;
+        if (empty($userData)) {
+            return $users;
         } else {
-            return false;
+            foreach ($userData as $userRow) {
+                $users[] = new User(
+                    $userRow['id'],
+                    $userRow['username'],
+                    $userRow['email'],
+                    $userRow['password'],
+                    $userRow['image'],
+                    $userRow['phone'],
+                    $userRow['rate'],
+                    $userRow['status'],
+                    $userRow['location_id'],
+                    $userRow['role_id']
+                );
+            }
         }
+
+        return $users;
     }
 
-    public function update($messages)
+    public function save($user)
     {
-        $stmt = $this->pdo->prepare("UPDATE messages
-            SET status = :status
-            WHERE id = :id
-        ");
+        $hashedPassword= password_hash($user->getPassword() ,PASSWORD_DEFAULT);
+        $statement = $this->getDatabase()->getConnection()->prepare("INSERT INTO `users` (username, email, password, image, phone, rate, status, location_id, role_id) 
+    VALUES (:username, :email, :password, :image, :phone, :rate, :status, :location_id, :role_id)");
 
-        $stmt->bindParam(':id', $messages->getId());
-        $stmt->bindParam(':status', $messages->getstatus());
+        $statement->bindValue(':username', $user->getUsername());
+        $statement->bindValue(':email', $user->getEmail());
+        $statement->bindValue(':password', $hashedPassword);
+        $statement->bindValue(':image', $user->getImage());
+        $statement->bindValue(':phone', $user->getPhone());
+        $statement->bindValue(':rate', $user->getRate());
+        $statement->bindValue(':status', $user->getStatus());
+        $statement->bindValue(':location_id', $user->getLocationId());
+        $statement->bindValue(':role_id', $user->getRoleId());
 
-        if ($stmt->execute()) {
-            return $messages;
-        } else {
-            return false;
+        try {
+            $statement->execute();
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
         }
     }
 
-    public function getById($id)
+    public function getUserByEmail($email)
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM messages WHERE id = :id");
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
-        $messages = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if ($messages){
-            // ($id, $content, $datePublication, $status, $receiver_id, $sender_id)
-            $message = new Message($messages->id, $messages->content, $messages->datePublication, $messages->status, $messages->receiver_id, $messages->sender_id);
-            return $message;
+        $query = $this->database->getConnection()->prepare("SELECT * FROM `users` WHERE email = :email");
+        $query->bindValue(':email', $email);
+
+        try {
+            $query->execute();
+            $userData = $query->fetch(PDO::FETCH_ASSOC);
+
+            if ($userData) {
+                return new User(
+                    $userData['id'],
+                    $userData['username'],
+                    $userData['email'],
+                    $userData['password'],
+                    $userData['image'],
+                    $userData['phone'],
+                    $userData['rate'],
+                    $userData['status'],
+                    $userData['location_id'],
+                    $userData['role_id']
+                );
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
         }
-        return false;
-    }
 
-    public function deleteById($id)
-    {
-        $messages = $this->getById($id);
-        if (!$messages) {
-            return false;
+        return null; 
+    }
+    public function getUserById($id){
+        $query = $this->database->getConnection()->prepare("SELECT * FROM `users` WHERE id = :id");
+        $query->bindValue(':id', $id);  // Corrected from ':email' to ':id'
+    
+        try {
+            $query->execute();
+            $userData = $query->fetch(PDO::FETCH_ASSOC);
+    
+            if ($userData) {
+                return new User(
+                    $userData['id'],
+                    $userData['username'],
+                    $userData['email'],
+                    $userData['password'],
+                    $userData['image'],
+                    $userData['phone'],
+                    $userData['rate'],
+                    $userData['status'],
+                    $userData['location_id'],
+                    $userData['role_id']
+                );
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
         }
-
-        $stmt = $this->pdo->prepare("DELETE FROM messages WHERE id = :id");
-        $stmt->bindParam(':id', $id);
-        return $stmt->execute() ? $messages : false;
+    
+        return null;
     }
+    
+    public function setUserStatus($email){
+        $query = $this->database->getConnection()->prepare("UPDATE `users` SET `status`='Active' where email=:email");
+        $query->bindValue(':email', $email);
 
-
+    }
 }

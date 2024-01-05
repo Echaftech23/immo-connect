@@ -1,4 +1,7 @@
 <?php
+ if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 require_once '../../vendor/autoload.php';
 
@@ -12,10 +15,13 @@ $router->setRoutes([
         '' => ['HomeController', 'index'],
         'home' => ['HomeController', 'index'],
         'annoucement' => ['ImmobiliersController', 'index'],
-        'annoucement/details' => ['ImmobiliersController', 'getImmobilier'],
-        'annoucement/make-transaction' => ['TransactionController', 'index'],
-        'signup' => ['UserController', 'signup'],
-        'signin' => ['UserController', 'login'],
+        'annoucement-details' => ['ImmobiliersController', 'getImmobilier'],
+        'make-transaction' => ['TransactionController', 'index'],
+        'signup' => ['UserController', 'redirectToSignup'],
+        'signin' => ['UserController', 'redirectToSignin'],
+        'logout' => ['UserController', 'logout'],
+        'chat' => ['ChatController', 'index'],
+        'display-messages' => ['ChatController', 'getAll'],
 
         'chat' => ['ChatController', 'chat'],
         'acheteur' => ['AcheteurController', 'acheteur'],
@@ -32,8 +38,10 @@ $router->setRoutes([
 
     ],
     'POST' => [
-        'annoucement/comment/add' => ['CommentaireController', 'save'],
-        'signup' => ['UserController', 'signup']
+        'comment-add' => ['CommentaireController', 'save'],
+        'submit-signup' => ['UserController', 'signup'],
+        'submit-login' => ['UserController', 'signin'],
+        'send-message' => ['ChatController', 'sendMessage'],
     ]
 ]);
 

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="public/css/tailwind.css" rel="stylesheet">
+<<<<<<< HEAD
     <!-- Font Awesome Free CDN -->
+=======
+>>>>>>> meqdar
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <style>
@@ -20,6 +23,16 @@
         .side-container::-webkit-scrollbar-thumb {
             background-color: #888;
             border-radius: 14px;
+        }
+
+        .self-end {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .self-end .bg-slate-950 {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 2rem;
         }
     </style>
 </head>
@@ -112,7 +125,6 @@
         </div>
 
         <div class="w-full">
-            <!-- Header -->
             <div class=" flex justify-between p-4 border-b pe-5">
                 <div class="flex items-center">
                     <button><img src="public/img/element-3.png" alt="icon" class="max-w-5 max-h-5"></button>
@@ -152,9 +164,7 @@
                 </div>
             </div>
 
-            <!-- Message container -->
             <div class="flex w-full">
-                <!-- messages side bar -->
                 <div class="side-container fixed h-screen overflow-hidden" style="width: 320px;">
                     <div class="side-header px-4">
                         <div class="flex items-center justify-between pt-4 pb-3 relative">
@@ -169,8 +179,9 @@
                             <input type="text" placeholder="Search in dashboard..." class="bg-transparent outline-none text-sm -mt-1">
                         </div>
 
-                        <!-- Message section -->
+
                         <div class="side-container" style="height: calc(140vh - 400px);">
+<<<<<<< HEAD
 
                             <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
                                 <img src="public/img/photo.png" alt="filter-icon" width="52">
@@ -237,11 +248,25 @@
                                     <p class="text-xs">Thank you very much. I'm glad...</p>
                                 </div>
                             </section>
+=======
+                            <?php foreach ($recievers as $reciever) { ?>
+                                <a href="display-messages?id=<?= $reciever->getId() ?>">
+                                    <section class="flex items-center px-4 py-3 rounded-xl bg-gray-200" style="margin-block: 10px !important;">
+                                        <img src="../../public/img/photo.png" alt="filter-icon" width="52">
+                                        <div class="w-full ms-2">
+                                            <div class="flex justify-between text-sm mb-2">
+                                                <p class=" font-medium"><?= $reciever->getUsername() ?></p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </a>
+                            <?php } ?>
+>>>>>>> meqdar
                         </div>
                     </div>
                 </div>
 
-                <!-- Message side-container -->
+
                 <main style="width: calc(100% - 320px); margin-left: 320px;">
                     <div class="pt-4 pb-3">
                         <div class="message-header">
@@ -261,6 +286,7 @@
                     </div>
 
                     <div class="bg-blue-100 pl-4 pe-7 side-container fixed overflow-hidden" style="width: calc(100% - 560px); height: 390px;">
+<<<<<<< HEAD
                         <div class="flex justify-between">
                             <div class="receiver mb-10">
                                 <div class="flex">
@@ -270,13 +296,21 @@
                                 <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
                                 <span class="block text-gray-500 text-xs">Today 11:55</span>
                             </div>
+=======
+                        <div id="message-container" class="flex flex-col space-y-4">
+                            <?php if (isset($messages)) {
+                                foreach ($messages as $message) { ?>
+                                    <?php if ($message->getSenderId() == $userData->getUsername()) { ?>
+>>>>>>> meqdar
 
-                            <div class="sender">
-                                <p class="mb-2 py-2 px-3 rounded-l-2xl rounded-b-xl bg-blue-950 w-70 text-white text-sm">Of course. Thank you so much for taking your time.</p>
-                                <span class="block text-gray-500 text-xs float-right">Today 11:56</span>
-                            </div>
-                        </div>
+                                        <div class="self-start " style="margin-left: 900px;" >
+                                            <div class="bg-slate-950 text-white rounded-l-2xl rounded-b-xl py-2 px-3 text-sm max-w-md" style="height :70px" >
+                                                <p><?= $message->getContent() ?></p>
+                                                <span class="block text-gray-500 text-xs "><?= $message->getDatePublication() ?></span>
+                                            </div>
+                                        </div>
 
+<<<<<<< HEAD
                         <div class="mb-20">
                             <div class="receiver">
                                 <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
@@ -351,6 +385,77 @@
                 </main>
             </div>
         </div>
+=======
+                                    <?php } else { ?>
+                                        <div class="self-start mb-4">
+                                            <div class="bg-blue-950 text-white rounded-r-2xl rounded-b-xl py-2 px-3 text-sm max-w-md">
+                                                <p><?= $message->getContent() ?></p>
+                                                <span class="block text-gray-500 text-xs"><?= $message->getDatePublication() ?></span>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                            <?php }
+                            } else {
+                                echo 'message';
+                            } ?>
+                        </div>
+                    </div>
+
+
+
+
+
+<footer class="fixed flex items-center bg-white w-svw mt-96 p-4">
+    <div class="flex items-center justify-between ms-4 p-1 ps-5 pe-2 rounded-2xl bg-gray-200" style="width: 620px;">
+        <form id="messageForm" method="POST" action="send-message" class="flex items-center">
+            <input type="hidden" name="sender_id" value="<?= $userData->getId() ?>">
+            <input type="hidden" name="receiver_id" value="<?=$_GET['id'] ?>">
+            <input type="text" name="message_content" id="messageContent" placeholder="Type your message" class="bg-transparent text-xs outline-none">
+            <button type="submit" class="p-1 rounded-xl bg-slate-900 ml-3">
+                send
+            </button>
+        </form>
+>>>>>>> meqdar
     </div>
+</footer>
+
+
+<!-- <script>
+    document.querySelector('#messageForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        sendMessage();
+    });
+
+    function sendMessage() {
+        var formData = {
+            sender_id: document.querySelector('input[name="sender_id"]').value,
+            receiver_id: document.querySelector('input[name="receiver_id"]').value,
+            message_content: document.querySelector('#messageContent').value
+        };
+
+        fetch('send-message', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response => response.text())
+        .then(data => {
+            var newMessageContainer = document.createElement('div');
+            newMessageContainer.innerHTML = data;
+            document.querySelector('#message-container').appendChild(newMessageContainer);
+            document.querySelector('#messageContent').value = ''; // Clear the input field
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+</script> -->
+
+</body>
+
+
+
 
 </body>

@@ -9,66 +9,102 @@ use App\models\UserModel;
 
 class UserController
 {
+    public function redirectToSignup()
+    {
+        if (isset($_SESSION["userId"])) {
+            $userSId=$_SESSION["userId"];
+                $user= new UserModel();
+                $userData= $user->getUserById($userSId);
+            }
+            else {
+               $userData=null ;
+            }
+    
+        include '../../view/auth/signup.php';
+    }
+    public function redirectToSignin()
+    {
+        if (isset($_SESSION["userId"])) {
+            $userSId=$_SESSION["userId"];
+                $user= new UserModel();
+                $userData= $user->getUserById($userSId);
+            }
+            else {
+               $userData=null ;
+            }
+    
+        include '../../view/auth/signin.php';
+    }
+
 
     public function signup()
     {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $confirmedPassword = $_POST['cpassword'];
 
-        include '../../view/auth/signup.php';
-
-        if(isset($_POST['signup'])){
-
-            $userModel = new UserModel();
-            $user = $userModel->getById(100);
-
-            if ($user !== null && !empty($user->getEmail())) {
-                echo "Email Already Registered";
-                include '../../view/auth/signup.php';
-                exit();
-            } else {
-                $hashedPassword = password_hash($_POST['password'], PASSWORD_BCRYPT);
-                $entity = new User($_POST['username'], $_POST['email'], $hashedPassword, NULL, NULL, NULL, NULL, 1, 1);
-                $user = new UserModel();
-                $user_id = $user->save($entity);
-
-                if ($user_id !== false) {
-                    exit(header('location:signin'));
-
-                } else {
-                    echo "Something went wrong";
-                }
-            }
+        $userModel = new UserModel();
+        $exist = $userModel->getUserByEmail($email);
+        if ($exist) {
+            $error = 'Username or email has already been taken';
+            echo $error;
+        } elseif ($password !== $confirmedPassword) {
+            $error = 'Passwords do not match';
+            echo $error;
+        } else {
+            $user = new User(null,$username, $email, $password, null, null, null, null, null, 1);
+            $userModel->save($user);
+            header('location:signin');
         }
     }
 
-    public function login()
+    public function signin()
     {
-        include '../../view/auth/signin.php';
 
-        $entity = new User($_POST['username'], $_POST['email'], $hashedPassword, NULL, NULL, NULL, NULL, 1, 1);
-        $user = new UserModel();
-        $user_id = $user->save($entity);
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-        if ($row) {
+        $userModel = new UserModel();
+        $userData = $userModel->getUserByEmail($email);
 
-            if (password_verify($password, $row['password'])) {
-                $_SESSION['auth'] = true;
-                $_SESSION['auth_user'] = [
-                    'username' => $row['username'],
-                    'email' => $row['email'],
-                    'id' => $row['id']
-                ];
+        if ($userData) {
+            if (password_verify($password, $userData->getPassword())) {
+                $userModel->setUserStatus($email);
+                switch ($userData->getRoleId()) {
+                    case 1:
+                        $_SESSION['isAdmin'] = true;
+                        $_SESSION['userId'] = $userData->getId();
+                        header('location:home');
+                        echo 'admin';
+                        break;
+                    case 10:
+                        $_SESSION['isSaler'] = true;
+                        $_SESSION['userId'] = $userData->getId();
+                        echo 'vendeur';
+                        break;
+                    case 11:
+                        $_SESSION['isClient'] = true;
+                        $_SESSION['userId'] = $userData->getId();
 
-                $_SESSION['message'] = "Logged In Successfully";
-
-                if ($row['role'] === "admin") {
-                    $_SESSION['isAdmin'] = true;
-                    header('Location: ../../view/admin/dashboard.php');
+                        echo 'acheteur';
+                        break;
+                    
                 }
             } else {
-                $_SESSION['message'] = "Password Incorrect";
+                echo 'incorrect Password';
             }
         } else {
-            $_SESSION['message'] = "Invalid Credentials";
+            echo 'user doesnt exist';
         }
+    }
+    public function logout(){
+        session_destroy();
+        header("location: signin");
+        exit();
+    
     }
 }
