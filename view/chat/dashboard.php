@@ -247,7 +247,7 @@
     <div class="flex items-center justify-between ms-4 p-1 ps-5 pe-2 rounded-2xl bg-gray-200" style="width: 620px;">
         <form id="messageForm" method="POST" action="send-message" class="flex items-center">
             <input type="hidden" name="sender_id" value="<?= $userData->getId() ?>">
-            <input type="hidden" name="receiver_id" value="2">
+            <input type="hidden" name="receiver_id" value="<?=$_GET['id'] ?>">
             <input type="text" name="message_content" id="messageContent" placeholder="Type your message" class="bg-transparent text-xs outline-none">
             <button type="submit" class="p-1 rounded-xl bg-slate-900 ml-3">
                 send

@@ -39,6 +39,9 @@ class ChatController
 
     public function sendMessage()
     {
+        
+        
+
         $sender=$_POST['sender_id'];
         $reciever=$_POST['receiver_id'];
         $content=$_POST['message_content'];
@@ -46,10 +49,11 @@ class ChatController
         $messageModel = new MessageModel();
 
         $result = $messageModel->insertMessage($sender, $reciever, $content);
-        header("Location: display-messages?id=$reciever");
 
 
         if ($result) {
+
+        header("Location:display-messages?id=$reciever");
 
             exit();
         } else {
