@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="public/css/tailwind.css" rel="stylesheet">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
+=======
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Volkhov:wght@200&family=Poppins:wght@400;700&display=swap">
+>>>>>>> f541c07cd3f3d916fe4cc237aef84f59458d86e2
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -22,7 +26,7 @@
             border-image-slice: 1;
             width: 200px;
             background-color: #56ff5615;
-           
+
         }
 
         .border-gradient-green1 {
@@ -53,7 +57,8 @@
 
             <div class="lg:w-1/2 mb-8 lg:mb-0">
                 <h1 class="text-6xl font-bold mb-4">Let's go! <br> <span class="text-orange-600">IC</span> has arrived &
-                    <br>It's waiting for you</h1>
+                    <br>It's waiting for you
+                </h1>
                 <p class="text-stone-400 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
                     dictum nisi, vel malesuada eros commodo nec. Nulla facilisi. </p>
                 <div class="flex items-center space-x-4 mb-4">
@@ -127,7 +132,7 @@
 
 
 
-    <!--      main     -->
+            <!--      main     -->
 
         </div>
 
@@ -142,8 +147,7 @@
                         dictum nisi, vel malesuada eros commodo nec. Nulla facilisi.</p>
                 </div>
                 <div class="md:w-1/2 mb-4 md:mb-0 md:mr-4">
-                    <img src="../public/Img/Horizontal.png" alt="Image 3"
-                        class="w-fit object-cover rounded mb-4 md:mb-0 md:mr-4">
+                    <img src="../public/Img/Horizontal.png" alt="Image 3" class="w-fit object-cover rounded mb-4 md:mb-0 md:mr-4">
                 </div>
             </div>
 
@@ -258,16 +262,13 @@
             </div>
         </div>
 
-        <div class="mt-10 items-center p-20"
-            style="background-image: url(../public/Img/background_subscribe.png); background-size:cover;">
+        <div class="mt-10 items-center p-20" style="background-image: url(../public/Img/background_subscribe.png); background-size:cover;">
             <h1 class="text-4xl text-center text-white font-bold mb-4">Subscribe for Exclusive Deals & Offers</h1>
 
 
             <form class="max-w-md mx-auto ">
-                <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded"
-                    placeholder="Your email address" required>
-                <button type="submit"
-                    class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 focus:outline-none focus:shadow-outline-orange active:bg-orange-800">Subscribe</button>
+                <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" placeholder="Your email address" required>
+                <button type="submit" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 focus:outline-none focus:shadow-outline-orange active:bg-orange-800">Subscribe</button>
             </form>
         </div>
 

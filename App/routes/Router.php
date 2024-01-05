@@ -2,7 +2,8 @@
 
 namespace App\routes;
 
-class Router {
+class Router
+{
     private $routes = [];
 
     public function setRoutes($routes)
@@ -17,6 +18,6 @@ class Router {
             return $this->routes[$method][$uri];
         }
 
-        return null; 
+        return null;
     }
 }

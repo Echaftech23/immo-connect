@@ -1,19 +1,15 @@
 <?php
+
 namespace App\controllers;
+
 require __DIR__ . '/../../vendor/autoload.php';
 
-class TransactionController{
+class TransactionController
+{
 
-    public function index(){
-        
-        echo 'hhi'; 
+    public function index()
+    {
+
+        echo 'hhi';
     }
-
-
-
-
 }
-
-
-
-?>

@@ -12,6 +12,7 @@ class UserController
 
     public function signup()
     {
+
         include '../../view/auth/signup.php';
 
         if(isset($_POST['signup'])){
@@ -30,8 +31,8 @@ class UserController
                 $user_id = $user->save($entity);
 
                 if ($user_id !== false) {
-                    echo "Registered Successfully";
-                    header('Location: ../../view/auth/signin.php');
+                    exit(header('location:signin'));
+
                 } else {
                     echo "Something went wrong";
                 }

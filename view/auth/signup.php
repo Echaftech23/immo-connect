@@ -1,3 +1,5 @@
+<?php
+?>
 <!doctype html>
 <html>
 
@@ -8,11 +10,11 @@
 </head>
 
 <body>
+
     <!--        navbar        -->
     <?php
     include '../../view/includes/navbar.php';
     ?>
-
     <!-- Container -->
     <div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10">
 
@@ -34,17 +36,17 @@
 
                         <div class="mb-3">
                             <label class="mb-2 block text-xs font-semibold">Email</label>
-                            <input type="email" name="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500"required />
+                            <input type="email" name="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required />
                         </div>
 
                         <div class="mb-3">
                             <label class="mb-2 block text-xs font-semibold">Password</label>
-                            <input type="password" name="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required/>
+                            <input type="password" name="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required />
                         </div>
 
                         <div class="mb-3">
                             <label class="mb-2 block text-xs font-semibold">Confirm Password</label>
-                            <input type="password" name="cpassword" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required/>
+                            <input type="password" name="cpassword" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required />
                         </div>
 
                         <div class="mb-3">
@@ -69,13 +71,9 @@
                 <img class="w-full h-full absolute top-1/2" src="public/img/log-light.png" style="width: 150px; height: 15px;">
             </div>
         </div>
-
     </div>
-
     <!--        footer        -->
-    <?php
-    include '../../view/includes/footer.php';
-    ?>
+<?php include '../../view/includes/footer.php';?>
     <!--             script pour navbar                                    -->
     <script type="text/javascript" src="public/js/navbarScript.js"></script>
 </body>

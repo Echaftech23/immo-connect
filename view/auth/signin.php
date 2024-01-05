@@ -34,12 +34,12 @@
                     <form class="mt-4">
                         <div class="mb-3">
                             <label class="mb-2 block text-xs font-semibold">Email</label>
-                            <input type="email" name="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required/>
+                            <input type="email" name="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required />
                         </div>
 
                         <div class="mb-3">
                             <label class="mb-2 block text-xs font-semibold">Password</label>
-                            <input type="password" name="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required/>
+                            <input type="password" name="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500 py-1 px-1.5 text-gray-500" required />
                         </div>
 
                         <div class="mb-3 flex flex-wrap content-center">
@@ -65,8 +65,8 @@
             </div>
         </div>
 
+        
     </div>
-
     <!--        footer        -->
     <?php
     include '../../view/includes/footer.php';

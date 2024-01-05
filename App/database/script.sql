@@ -148,4 +148,5 @@ CREATE table saved
 );
 ALTER TABLE immobiliers
 ADD COLUMN user_id INT,
+
 ADD FOREIGN KEY (user_id) REFERENCES users(id);

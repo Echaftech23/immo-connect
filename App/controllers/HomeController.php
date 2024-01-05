@@ -1,4 +1,5 @@
 <?php
+
 namespace App\controllers;
 
 require __DIR__ . '/../../vendor/autoload.php';
@@ -6,14 +7,13 @@ require __DIR__ . '/../../vendor/autoload.php';
 use App\entities\Immobilier;
 use App\models\ImmobilierModel;
 
-class HomeController{
-    public function index(){
+class HomeController
+{
+    public function index()
+    {
 
-        
-        include '../../view/index.php'; 
+
+        include '../../view/index.php';
     }
 }
 
-
-
-?>

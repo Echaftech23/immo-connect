@@ -6,6 +6,7 @@ use App\Dao\DaoInterface;
 use App\entities\User;
 use App\database\Database, PDO, Exception;
 
+
 class UserModel implements DaoInterface
 {
     private $pdo;
@@ -14,6 +15,7 @@ class UserModel implements DaoInterface
     {
         $this->pdo = Database::getInstance()->getConnection();
     }
+
 
 
     public function getAll()
@@ -116,7 +118,7 @@ class UserModel implements DaoInterface
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_OBJ);
         if ($user) {
-            $user = new User($user->id, $user->username, $user->email, $user->password, $user->image, $user->phone, $user->rate, $user->status, $user->location_id, $user->role_id);
+            $user = new User($user->username, $user->email, $user->password, $user->image, $user->phone, $user->rate, $user->status, $user->location_id, $user->role_id);
             return $user;
         } else {
             return null;

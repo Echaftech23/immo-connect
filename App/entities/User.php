@@ -1,9 +1,10 @@
 <?php
 
 namespace App\entities;
-class User extends GenericEntity {
-    private $id;
 
+class User extends GenericEntity
+{
+    private $id;
     private $username;
     private $email;
     private $password;

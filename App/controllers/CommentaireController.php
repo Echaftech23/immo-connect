@@ -1,4 +1,5 @@
 <?php
+
 namespace App\controllers;
 
 use App\entities\Commentaire;
@@ -15,7 +16,6 @@ class CommentaireController{
         $datePublication = date('Y-m-d H:i:s');
         $user_id = 1;
         $immobilier_id = isset($_POST['immobilier_id']) ? htmlspecialchars($_POST['immobilier_id']) : '';
-        
 
         $commentaire = new Commentaire($id, $content, $image, $datePublication, $user_id, $immobilier_id);
         $commentaireModel = new CommentaireModel();

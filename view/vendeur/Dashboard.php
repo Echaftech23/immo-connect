@@ -79,7 +79,11 @@
 
             <?php
 
+<<<<<<< HEAD
             include '../../view/includes/sidebar.php';
+=======
+            include '../../view/includes/vendeurSidebar.php';
+>>>>>>> e4fd1091c6ed9c1cb3da389e8059cea15fe4287e
             ?>
             <li>
                 <a class="" href="#">

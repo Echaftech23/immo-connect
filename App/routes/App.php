@@ -16,11 +16,20 @@ $router->setRoutes([
         'annoucement/make-transaction' => ['TransactionController', 'index'],
         'signup' => ['UserController', 'signup'],
         'signin' => ['UserController', 'login'],
+
         'chat' => ['ChatController', 'chat'],
         'acheteur' => ['AcheteurController', 'acheteur'],
         'vendeur' => ['VendeurController', 'vendeur'],
         'profile' => ['ProfileController', 'profile'],
         'saved' => ['ProfileController', 'saved'],
+
+        'imobilier' => ['ImmobiliersController', 'vendeur'],
+        'add-imobilier' => ['ImmobiliersController', 'vendeurImmobilier'],
+        'delete' => ['ImmobiliersController', 'deleteImmobilier'],
+        'chat' => ['UserController', 'chat']
+
+
+
     ],
     'POST' => [
         'annoucement/comment/add' => ['CommentaireController', 'save'],
@@ -58,4 +67,5 @@ if (isset($_GET['url'])) {
     } catch (Exception $e) {
         echo 'Caught exception: ', $e->getMessage(), "\n";
     }
+
 }

@@ -146,6 +146,7 @@
                                 </div>
                             </div>
                             <img src="public/img/Avatar-Image.png" alt="avatar" width="48" height="48">
+
                         </div>
                     </div>
                 </div>
@@ -294,6 +295,7 @@
                                     <img src="public/img/image-2.png" alt="image" width="100px">
                                     <img src="public/img/image-2.png" class="block ml-4" alt="image" width="100px">
                                 </div>
+
                                 <p class="my-2 py-2 px-3 rounded-r-2xl rounded-b-xl bg-slate-950 w-70 text-white text-sm">Good question. How about just discussing it?</p>
                                 <span class="block text-gray-500 text-xs">Today 11:55</span>
                             </div>
