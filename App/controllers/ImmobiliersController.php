@@ -36,6 +36,16 @@ class ImmobiliersController
         exit();
     }
 
+    public function insertImmobilier()
+    {
+        $immobilierModel = new ImmobilierModel();
+        $entity = new Immobilier($_POST['title'], $_POST['description'], $_POST['price'], $_POST['image1'], NULL, NULL, NULL, NULL, $_POST['status'], $_POST['rooms'], $_POST['flooring_type'], $_POST['bathrooms'], $_POST['location_id'], $_POST['type_id'], $_POST['user_id']);
+        $immobilier = $immobilierModel->save($entity);
+
+        include '../../view/vendeur/add-imobilier.php';
+        exit();
+    }
+
     public function vendeurImmobilier()
     {
         $immobilierModel = new ImmobilierModel();

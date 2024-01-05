@@ -22,8 +22,7 @@ class Immobilier extends GenericEntity
     private $user_id;
 
 
-    public function __construct($id, $title, $description, $price, $image1, $image2, $image3, $image4, $image5, $status, $rooms, $flooring_type, $bathrooms, $location_id, $type_id, $user_id) {
-        $this->id = $id;
+    public function __construct($title, $description, $price, $image1, $image2, $image3, $image4, $image5, $status, $rooms, $flooring_type, $bathrooms, $location_id, $type_id, $user_id) {
         $this->title = $title;
         $this->description = $description;
         $this->price = $price;

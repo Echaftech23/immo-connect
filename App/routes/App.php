@@ -18,6 +18,7 @@ $router->setRoutes([
         'signin' => ['UserController', 'login'],
         'imobilier' => ['ImmobiliersController', 'vendeur'],
         'add-imobilier' => ['ImmobiliersController', 'vendeurImmobilier'],
+        'saveImobilier' => ['ImmobiliersController', 'insertImmobilier'],
         'delete' => ['ImmobiliersController', 'deleteImmobilier'],
         'chat' => ['UserController', 'chat']
 
