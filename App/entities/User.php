@@ -1,10 +1,9 @@
 <?php
 
 namespace App\entities;
-
-class User extends GenericEntity
-{
+class User extends GenericEntity {
     private $id;
+
     private $username;
     private $email;
     private $password;
@@ -13,7 +12,7 @@ class User extends GenericEntity
     private $rate = NULL;
     private $status = 'Online';
     private $location_id = NULL;
-    private $role_id ;
+    private $role_id = '1';
 
     public function __construct($id,$username, $email, $password, $image, $phone, $rate, $status, $location_id, $role_id)
     {

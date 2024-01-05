@@ -5,17 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Page</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <link href="public/css/tailwind.css" rel="stylesheet">
-=======
-    <link href="../public/css/tailwind.css" rel="stylesheet">
->>>>>>> f541c07cd3f3d916fe4cc237aef84f59458d86e2
-=======
-    <link href="public/css/tailwind.css" rel="stylesheet">
->>>>>>> meqdar
-
-
 </head>
 
 <body class="bg-gray-100">
@@ -86,7 +76,6 @@
     include 'Includes/footer.php';
     ?>
     <script>
- 
     document.addEventListener("DOMContentLoaded", function () {
         const container = document.querySelector(".flex-wrap");
         const priceFilter = document.getElementById("priceFilter");

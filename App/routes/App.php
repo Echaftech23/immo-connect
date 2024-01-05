@@ -23,7 +23,7 @@ $router->setRoutes([
         'chat' => ['ChatController', 'index'],
         'display-messages' => ['ChatController', 'getAll'],
 
-        'chat' => ['ChatController', 'chat'],
+        
         'acheteur' => ['AcheteurController', 'acheteur'],
         'vendeur' => ['VendeurController', 'vendeur'],
         'profile' => ['ProfileController', 'profile'],
@@ -32,7 +32,7 @@ $router->setRoutes([
         'imobilier' => ['ImmobiliersController', 'vendeur'],
         'add-imobilier' => ['ImmobiliersController', 'vendeurImmobilier'],
         'delete' => ['ImmobiliersController', 'deleteImmobilier'],
-        'chat' => ['UserController', 'chat']
+        
 
 
 

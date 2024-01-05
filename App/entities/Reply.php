@@ -1,22 +1,20 @@
 <?php
-
 namespace App\entities;
 
-class Reply
-{
+class Reply {
     private $id;
     private $content;
     private $datePublication;
     private $status;
     private $message_id;
 
-    public function __construct($id, $content, $datePublication, $status, $message_id)
-    {
+    public function __construct($id, $content, $datePublication, $status, $message_id) {
         $this->id = $id;
         $this->content = $content;
         $this->datePublication = $datePublication;
         $this->status = $status;
         $this-> message_id = $message_id;
+       
     }
 
     // public function getId() {
@@ -66,5 +64,4 @@ class Reply
     // public function setSenderId($sender_id) {
     //     $this->sender_id = $sender_id;
     // }
-
 }

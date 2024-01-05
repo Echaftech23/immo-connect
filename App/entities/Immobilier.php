@@ -1,9 +1,6 @@
 <?php
-
 namespace App\entities;
-
-class Immobilier extends GenericEntity
-{
+class Immobilier extends GenericEntity {
     private $id;
     private $title;
     private $description;
@@ -40,156 +37,125 @@ class Immobilier extends GenericEntity
         $this->type_id = $type_id;
         $this->user_id = $user_id;
 
-
     }
 
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
-    public function setId($id)
-    {
+    public function setId($id) {
         $this->id = $id;
     }
 
-    public function getTitle()
-    {
+    public function getTitle() {
         return $this->title;
     }
 
-    public function setTitle($title)
-    {
+    public function setTitle($title) {
         $this->title = $title;
     }
 
-    public function getDescription()
-    {
+    public function getDescription() {
         return $this->description;
     }
 
-    public function setDescription($description)
-    {
+    public function setDescription($description) {
         $this->description = $description;
     }
 
-    public function getPrice()
-    {
+    public function getPrice() {
         return $this->price;
     }
 
-    public function setPrice($price)
-    {
+    public function setPrice($price) {
         $this->price = $price;
     }
 
-    public function getImage1()
-    {
+    public function getImage1() {
         return $this->image1;
     }
 
-    public function setImage1($image1)
-    {
+    public function setImage1($image1) {
         $this->image1 = $image1;
     }
 
-    public function getImage2()
-    {
+    public function getImage2() {
         return $this->image2;
     }
 
-    public function setImage2($image2)
-    {
+    public function setImage2($image2) {
         $this->image2 = $image2;
     }
 
-    public function getImage3()
-    {
+    public function getImage3() {
         return $this->image3;
     }
 
-    public function setImage3($image3)
-    {
+    public function setImage3($image3) {
         $this->image3 = $image3;
     }
 
-    public function getImage4()
-    {
+    public function getImage4() {
         return $this->image4;
     }
 
-    public function setImage4($image4)
-    {
+    public function setImage4($image4) {
         $this->image4 = $image4;
     }
 
-    public function getImage5()
-    {
+    public function getImage5() {
         return $this->image5;
     }
 
-    public function setImage5($image5)
-    {
+    public function setImage5($image5) {
         $this->image5 = $image5;
     }
 
-    public function getStatus()
-    {
+    public function getStatus() {
         return $this->status;
     }
 
-    public function setStatus($status)
-    {
+    public function setStatus($status) {
         $this->status = $status;
     }
 
-    public function getRooms()
-    {
+    public function getRooms() {
         return $this->rooms;
     }
 
-    public function setRooms($rooms)
-    {
+    public function setRooms($rooms) {
         $this->rooms = $rooms;
     }
 
-    public function getFlooringType()
-    {
+    public function getFlooringType() {
         return $this->flooring_type;
     }
 
-    public function setFlooringType($flooring_type)
-    {
+    public function setFlooringType($flooring_type) {
         $this->flooring_type = $flooring_type;
     }
 
-    public function getBathrooms()
-    {
+    public function getBathrooms() {
         return $this->bathrooms;
     }
 
-    public function setBathrooms($bathrooms)
-    {
+    public function setBathrooms($bathrooms) {
         $this->bathrooms = $bathrooms;
     }
 
-    public function getLocationId()
-    {
+    public function getLocationId() {
         return $this->location_id;
     }
 
-    public function setLocationId($location_id)
-    {
+    public function setLocationId($location_id) {
         $this->location_id = $location_id;
     }
 
-    public function getTypeId()
-    {
+    public function getTypeId() {
         return $this->type_id;
     }
 
-    public function setTypeId($type_id)
-    {
+    public function setTypeId($type_id) {
         $this->type_id = $type_id;
     }
 
@@ -201,3 +167,4 @@ class Immobilier extends GenericEntity
         $this->user_id = $user_id;
     }
 }
+

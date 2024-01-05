@@ -1,4 +1,5 @@
-
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
     # Exclude specific directories from the rewrite
     RewriteRule ^(?:public/(?:js|css|Img)/) - [L]
