@@ -1,13 +1,9 @@
 <?php
 
 namespace App\entities;
-<<<<<<< HEAD
 
 class Immobilier extends GenericEntity
 {
-=======
-class Immobilier extends GenericEntity {
->>>>>>> f541c07cd3f3d916fe4cc237aef84f59458d86e2
     private $id;
     private $title;
     private $description;
