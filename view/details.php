@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immobilier Details</title>
+    <link href="public/css/tailwind.css" rel="stylesheet">
     
     <style>
         .images{
@@ -39,7 +40,6 @@
             overflow-y: auto;
         }
     </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 
 <body>
@@ -48,13 +48,13 @@
     <div class="flex gap-4">
         <div class="images flex-shrink-0">
         <div class="image2">
-                <img src="../public/Img/annoucement1.jpg" class="img2">
-                <img src="../public/Img/annoucement1.jpg" class="img2">
-                <img src="../public/Img/Horizontal.png" class="img2">
-                <img src="../public/Img/annoucement1.jpg" class="img2">
-                <img src="../public/Img/annoucement1.jpg" class="img2">
+                <img src="public/Img/annoucement1.jpg" class="img2">
+                <img src="public/Img/annoucement1.jpg" class="img2">
+                <img src="public/Img/Horizontal.png" class="img2">
+                <img src="public/Img/annoucement1.jpg" class="img2">
+                <img src="public/Img/annoucement1.jpg" class="img2">
             </div>
-            <img src="../public/Img/annoucement1.jpg" alt="Image Description" class="img1 w-full h-auto">
+            <img src="public/Img/annoucement1.jpg" alt="Image Description" class="img1 w-full h-auto">
         </div>
         <div class="">
         </div>
@@ -114,7 +114,7 @@
                 <span class="text-yellow-500">★★★★★</span>
             </div>
 
-            <form class="mt-4" action="comment/add" method="Post">
+            <form class="mt-4" action="comment-add" method="Post">
                 <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                 <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md">
 

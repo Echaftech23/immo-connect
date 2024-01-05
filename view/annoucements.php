@@ -60,7 +60,7 @@
                         </div>
 
                         <div class="flex justify-between p-4">
-                            <a href="annoucement/details?id=<?= $immobilier->getId() ?>" class="bg-blue-500 text-white px-4 py-2 rounded-full">Explore Details</a>
+                            <a href="annoucement-details?id=<?= $immobilier->getId() ?>" class="bg-blue-500 text-white px-4 py-2 rounded-full">Explore Details</a>
                             <button class="bg-orange-500 text-white px-4 py-2 rounded-full">Message Seller</button>
                         </div>
                     </div>
